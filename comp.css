@@ -1,0 +1,102 @@
+/* Top banner */
+.top-banner {
+    width: 100%;
+    height: 125px !important; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4; /* Fallback background */
+    overflow: hidden;
+
+    /* paralleax */
+    /* background: url('asset/topbanner1.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 20px; */
+}
+
+.top-banner .banner-image {
+    width: 100%;
+    height: 100%;
+}
+
+.top-banner .banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image stretches fully */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .top-banner {
+        height: 100px; /* Smaller height for mobile screens */
+    }
+}
+
+
+
+
+
+.buttonhollow {
+    display: inline-flex; /* Flex for centering text */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 40px; /* Balanced padding */
+    border: 2px solid #168222; /* Outer border */
+    color: #168222;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0; /* No rounded edges */
+    overflow: hidden;
+}
+
+.buttonhollow::before {
+    content: "";
+    position: absolute;
+    top: 4px; /* Creates equal spacing around */
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 2px solid #168222; /* Inner border */
+    transition: all 0.3s ease-in-out;
+}
+
+.buttonhollow:hover {
+    background: #168222;
+    color: #fff;
+    box-shadow: 0px 4px 10px 168222(204, 38, 44, 0.3);
+}
+
+.buttonhollow:hover::before {
+    border-color: #fff; /* Change inner border color on hover */
+}
+
+.buttonhollow:active {
+    transform: scale(0.96);
+}
+
+/* Ensure proper text alignment */
+.buttonhollow span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix for <a> tag (if used as a button) */
+.buttonhollow a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonhollow:hover a {
+    color: #fff;
+}
