@@ -6,19 +6,27 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="contact.css?v=1.0">
     <link rel="stylesheet" href="all.css">
-    
-    <!-- style for components -->
     <link rel="stylesheet" href="comp.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("johnvincentperalta923@gmail.com"); // Replace with your EmailJS user ID
+        })();
+    </script>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <!-- Replace PHP includes with static HTML -->
+    <header>
+        <!-- Add your header content here -->
+    </header>
 
     <section class="top-banner">
         <div class="banner-image">
             <img src="asset/topbanner2.jpg" alt="Top Banner">
         </div>
     </section>
-
 
     <section class="contact-section">
         <div class="container">
@@ -38,19 +46,11 @@
                     <p>support@feedmasters.com</p>
                 </div>
             </div>
+
             <div class="contact-form">
-                <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $species = htmlspecialchars($_POST["species"]);
-                    $question = htmlspecialchars($_POST["question"]);
-                    $firstName = htmlspecialchars($_POST["first_name"]);
-                    $lastName = htmlspecialchars($_POST["last_name"]);
-                    $email = htmlspecialchars($_POST["email"]);
-                    $phone = htmlspecialchars($_POST["phone"]);
-                    echo "<p class='success-message'>Thank you, $firstName! Your question has been received.</p>";
-                }
-                ?>
-                <form method="POST" action="">
+                <p id="success-message" class="success-message" style="display:none;">Thank you! Your question has been sent successfully.</p>
+
+                <form id="contact-form">
                     <select name="species" required>
                         <option value="">Select Species</option>
                         <option value="Fish">Fish</option>
@@ -69,8 +69,25 @@
             </div>
         </div>
     </section>
-    <script src="contact.js"></script>
-    <?php include 'footer.php'; ?>
+
+    <script>
+        // Form submission with EmailJS
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_j54obog', 'template_w3y98n4', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                    document.getElementById('success-message').style.display = 'block';
+                    document.getElementById('contact-form').reset(); // Reset form after submission
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    </script>
+
+    <footer>
+        <!-- Add your footer content here -->
+    </footer>
 </body>
 </html>
-
