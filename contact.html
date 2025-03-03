@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="contact.css?v=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="comp.css">
 
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("wwheSZugwcTy53lRz"); // Replace with your EmailJS user ID
-        })();
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+        publicKey: "wwheSZugwcTy53lRz",
+    });
+    })();
+    </script>
+<script src="contact.js"></script>
 </head>
 <body>
     <!-- Replace PHP includes with static HTML -->
@@ -51,26 +55,81 @@
                 <p id="success-message" class="success-message" style="display:none;">Thank you! Your question has been sent successfully.</p>
 
                 <form id="contact-form">
-                    <select name="species" required>
+                    <h2>Contact Form</h2>
+        
+                    <!-- Sender Info -->
+                    <input type="text" id="sendername" placeholder="Sender Name" required><br><br>
+
+                    <input type="text" id="subject" placeholder="Subject" required><br><br>
+
+                    <input type="email" id="replyto" placeholder="Reply Email" required><br><br>
+
+                    <textarea id="message" cols="40" rows="8" placeholder="Your message here..." required></textarea><br><br>
+
+                    <!-- Recipient Info -->
+                    <input type="text" id="to" value="johnvincentperalta923@gmail.com" placeholder="Recipient Email" required><br><br>
+
+                    <!-- Additional Info -->
+                    <select id="species" required>
                         <option value="">Select Species</option>
                         <option value="Fish">Fish</option>
                         <option value="Chicken">Chicken</option>
                         <option value="Duck">Duck</option>
                         <option value="Quail">Quail</option>
                         <option value="Pig">Pig</option>
-                    </select>
-                    <textarea name="question" placeholder="Your question..." required></textarea>
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                    <input type="text" name="last_name" placeholder="Last Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="text" name="phone" placeholder="Phone Number">
-                    <button type="submit">Submit</button>
+                    </select><br><br>
+
+                    <input type="email" id="email" placeholder="Your Email" required><br><br>
+
+                    <input type="text" id="phone" placeholder="Phone Number"><br><br>
+        
+                    <!-- Submit Button -->
+                    <button type="button" onclick="sendMail();">Send</button>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- Responsive Google Map -->
+    <section class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7710.966829600453!2d120.81940120000002!3d14.910137100000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396543b844b4f21%3A0x1c75d7ea889fbee9!2sNew%20Hope%20Bulacan%20Agriculture%20Inc!5e0!3m2!1sen!2sph!4v1740973432661!5m2!1sen!2sph"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </section>
+
+    
     <script>
+        function sendMail() {
+            (function() {
+                emailjs.init("wwheSZugwcTy53lRz");
+            })();
+
+            var params = {
+                sendername: document.querySelector("#sendername").value,
+                subject: document.querySelector("#subject").value,
+                replyto: document.querySelector("#replyto").value,
+                message: document.querySelector("#message").value,
+                to: document.querySelector("#to").value,
+                species: document.querySelector("#species").value,
+                email: document.querySelector("#email").value,
+                phone: document.querySelector("#phone").value,
+            };
+
+
+            var serviceID = "service_j54obog";
+            var templateID = "template_8v4o7g8";
+
+            emailjs.send(serviceID, templateID, params)
+                .then( res => {
+                    alert("Email sent successfully!");
+                })
+                .catch();
+        }
+    </script>
+
+    <!-- <script>
         // Form submission with EmailJS
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -84,7 +143,7 @@
                     console.log('FAILED...', error);
                 });
         });
-    </script>
+    </script> -->
 
     <footer>
         <!-- Add your footer content here -->
