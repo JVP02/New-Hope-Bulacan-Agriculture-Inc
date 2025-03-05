@@ -23,83 +23,186 @@
 <body>
     <!-- Replace PHP includes with static HTML -->
     <header>
-        <!-- Add your header content here -->
+        <nav class="main-nav">
+            <a href="index.html"><img src="asset/logo.png" alt="New Hope Logo" class="logo"></a>
+    
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            <ul>
+                <!-- Animals (Has Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item">Animals</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="fish1.html">
+                                    <span class="icon">
+                                        <img src="asset/bangusicon.png" alt="Bangus" class="default-icon">
+                                        <img src="asset/bangushover.png" alt="Bangus" class="hover-icon">
+                                    </span>
+                                    Fish 1
+                                </a></li>
+                            <li><a href="fish2.html">
+                                    <span class="icon">
+                                        <img src="asset/tilapiaicon.png" alt="Tilapia" class="default-icon">
+                                        <img src="asset/tilapiahover.png" alt="Tilapia" class="hover-icon">
+                                    </span>
+                                    Fish 2
+                                </a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
+                <!-- Other Menu Items (Direct Links) -->
+                <li><a href="product.html" class="menu-item">Products</a></li>
+                <li><a href="services.html" class="menu-item">Services</a></li>
+                <li><a href="careers.html" class="menu-item">Careers</a></li>
+                <li><a href="contact.html" class="menu-item">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="top-banner">
-        <div class="banner-image">
-            <img src="asset/topbanner2.jpg" alt="Top Banner">
-        </div>
-    </section>
-
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-info">
-                <h1>Ask An Expert</h1>
-                <p>Send us your question and our animal nutrition experts can help.</p>
-                <div class="contact-block">
-                    <h3>Corporate Headquarters:</h3>
-                    <p>FeedMasters Co.<br>123 Nutrition Ave<br>Farmtown, FT 45678</p>
+    <main>
+        <section class="top-banner">
+            <div class="banner-image">
+                <img src="asset/topbanner2.jpg" alt="Top Banner">
+            </div>
+        </section>
+    
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-info">
+                    <h3>Ask An Expert</h3>
+                    <p>Send us your question and our animal nutrition experts can help.</p>
+                    <div class="contact-block">
+                        <h3>Corporate Headquarters:</h3> 
+                        <p>0645 Barangay Tibag<br>Pulilan, Philippines, 3005</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Phone:</h3>
+                        <p>0915 272 7548</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Email:</h3>
+                        <p>newhope.phlab@gmail.com</p>
+                        <h3>Facebook</h3>
+                        <a href="https://www.facebook.com/newhopephilippines/">New Hope Group</a>
+                        <p></p>
+                    </div>
                 </div>
-                <div class="contact-block">
-                    <h3>Phone:</h3>
-                    <p>123-456-7890</p>
-                </div>
-                <div class="contact-block">
-                    <h3>Email:</h3>
-                    <p>support@feedmasters.com</p>
+    
+                <div class="contact-form">
+                    <p id="success-message" class="success-message" style="display:none;">Thank you! Your question has been sent successfully.</p>
+    
+                    <form id="contact-form-container">
+                        <div class="contact-grid">
+                            <input type="text" id="firstname" placeholder="First Name" required>
+                            <input type="text" id="lastname" placeholder="Last Name" required>
+                            <input type="text" id="phone" placeholder="Phone" required>
+                            <input type="email" id="email" placeholder="Email" required>
+                            <input type="text" id="address" placeholder="Address" required>
+                            <input type="text" id="city" placeholder="City" required>
+                            <input type="text" id="zip" placeholder="Zip Code" required>
+                        </div>
+                        <div class="contact-message">
+                            <input type="text" id="subject" placeholder="Subject" required><br><br>
+                            <textarea id="message" cols="40" rows="8" placeholder="Your message here..." required></textarea><br><br>
+                        </div>
+                    
+                        <!-- Submit Button -->
+                        <button type="button" onclick="sendMail();">Send</button>
+                    </form>
+                    
                 </div>
             </div>
-
-            <div class="contact-form">
-                <p id="success-message" class="success-message" style="display:none;">Thank you! Your question has been sent successfully.</p>
-
-                <form id="contact-form">
-                    <h2>Contact Form</h2>
-        
-                    <!-- Sender Info -->
-                    <input type="text" id="sendername" placeholder="Sender Name" required><br><br>
-
-                    <input type="text" id="subject" placeholder="Subject" required><br><br>
-
-                    <input type="email" id="replyto" placeholder="Reply Email" required><br><br>
-
-                    <textarea id="message" cols="40" rows="8" placeholder="Your message here..." required></textarea><br><br>
-
-                    <!-- Recipient Info -->
-                    <input type="text" id="to" value="johnvincentperalta923@gmail.com" placeholder="Recipient Email" required><br><br>
-
-                    <!-- Additional Info -->
-                    <select id="species" required>
-                        <option value="">Select Species</option>
-                        <option value="Fish">Fish</option>
-                        <option value="Chicken">Chicken</option>
-                        <option value="Duck">Duck</option>
-                        <option value="Quail">Quail</option>
-                        <option value="Pig">Pig</option>
-                    </select><br><br>
-
-                    <input type="email" id="email" placeholder="Your Email" required><br><br>
-
-                    <input type="text" id="phone" placeholder="Phone Number"><br><br>
-        
-                    <!-- Submit Button -->
-                    <button type="button" onclick="sendMail();">Send</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Responsive Google Map -->
-    <section class="map-container">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7710.966829600453!2d120.81940120000002!3d14.910137100000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396543b844b4f21%3A0x1c75d7ea889fbee9!2sNew%20Hope%20Bulacan%20Agriculture%20Inc!5e0!3m2!1sen!2sph!4v1740973432661!5m2!1sen!2sph"
-            allowfullscreen=""
-            loading="lazy">
-        </iframe>
-    </section>
+        </section>
+    
+        <!-- Responsive Google Map -->
+        <section class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7710.966829600453!2d120.81940120000002!3d14.910137100000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396543b844b4f21%3A0x1c75d7ea889fbee9!2sNew%20Hope%20Bulacan%20Agriculture%20Inc!5e0!3m2!1sen!2sph!4v1740973432661!5m2!1sen!2sph"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
+    </main>
 
     
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Questions?</h4>
+                <p>One of our nutrition experts may be able to help.</p>
+                <a class="button" href="/ask-an-expert">Ask an Expert</a>
+                <h4>Our Partners</h4>
+                <nav>
+                    <a href="https://www.mazuri.com" target="_blank">Mazuri® Exotic Animal Nutrition</a>
+                    <a href="http://www.fortivaimpact.com/">Fortiva™</a>
+                    <a href="https://www.winfieldunited.com" target="_blank">WinField® United</a>
+                    <a href="https://www.landolakesinc.com" target="_blank">Land O'Lakes, Inc.</a>
+                    <a href="/milk-replacer">Land O'Lakes® Animal Milk Solutions</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h4>Animals</h4>
+                <nav>
+                    <a href="/horse-feed">Horse</a>
+                    <a href="/dairy-feed">Dairy</a>
+                    <a href="/cattle-feed">Cattle</a>
+                    <a href="/chicken-feed">Backyard Poultry</a>
+                    <a href="/swine-feed">Swine</a>
+                    <a href="/goat-feed">Goat</a>
+                    <a href="/sheep-feed">Sheep</a>
+                    <a href="/rabbit-food">Rabbit</a>
+                    <a href="/fish-and-aquatics-feed">Fish</a>
+                    <a href="/deer-feed">Deer</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h4>About New Hope</h4>
+                <nav>
+                    <a href="/about-us">About</a>
+                    <a href="/ask-an-expert">Contact Us</a>
+                    <a href="/events">Events</a>
+                    <a href="/news">News</a>
+                    <a href="/shop">Shop Online</a>
+                    <a href="/careers">Careers</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h4>Retail Business</h4>
+                <a class="button" href="/businesslink/login">Community Login</a>
+                <a class="button" href="/become-a-purina-dealer">Become a Dealer</a>
+                <a href="/"><img class="footer-logo" alt="Purina Logo" src="asset/logo.png"></a>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p class="copyright">© 2025 New Hope Bulacan Agriculture Inc. All Rights Reserved.</p>
+            <nav class="sub-links">
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Use</a> |
+                <a href="#">SMS Terms</a> |
+                <a href="#">Developer</a>
+            </nav>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
     <script>
         function sendMail() {
             (function() {
@@ -107,14 +210,16 @@
             })();
 
             var params = {
-                sendername: document.querySelector("#sendername").value,
-                subject: document.querySelector("#subject").value,
-                replyto: document.querySelector("#replyto").value,
-                message: document.querySelector("#message").value,
-                to: document.querySelector("#to").value,
-                species: document.querySelector("#species").value,
-                email: document.querySelector("#email").value,
+                firstname: document.querySelector("#firstname").value,
+                lastname: document.querySelector("#lastname").value,
                 phone: document.querySelector("#phone").value,
+                email: document.querySelector("#email").value,
+                address: document.querySelector("#address").value,
+                city: document.querySelector("#city").value,
+                zip: document.querySelector("#zip").value,
+                subject: document.querySelector("#subject").value,
+                message: document.querySelector("#message").value,
+                to: "johnvincentperalta923@gmail.com" // Added recipient email directly here
             };
 
 
@@ -122,10 +227,12 @@
             var templateID = "template_8v4o7g8";
 
             emailjs.send(serviceID, templateID, params)
-                .then( res => {
-                    alert("Email sent successfully!");
-                })
-                .catch();
+            .then(res => {
+                alert("Email sent successfully!");
+            })
+            .catch(err => {
+                alert("Failed to send email: " + err);
+            });
         }
     </script>
 
@@ -144,9 +251,5 @@
                 });
         });
     </script> -->
-
-    <footer>
-        <!-- Add your footer content here -->
-    </footer>
 </body>
 </html>
