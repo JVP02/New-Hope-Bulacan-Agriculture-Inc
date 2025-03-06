@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="comp.css">
 
     <script type="text/javascript"
@@ -72,28 +71,34 @@
                 <img src="asset/topbanner2.jpg" alt="Top Banner">
             </div>
         </section>
-    
+
         <section class="contact-section">
             <div class="container">
                 <div class="contact-info">
-                    <h3>Ask An Expert</h3>
-                    <p>Send us your question and our animal nutrition experts can help.</p>
+                    <h3>Ask Our Team</h3>
+                    <p>Send us your question and our team can help you.</p>
+                
                     <div class="contact-block">
-                        <h3>Corporate Headquarters:</h3> 
+                        <h3><img src="asset/iconadd.png" alt="Location Icon"> Plant Site:</h3>
                         <p>0645 Barangay Tibag<br>Pulilan, Philippines, 3005</p>
                     </div>
+                
                     <div class="contact-block">
-                        <h3>Phone:</h3>
+                        <h3><img src="asset/iconphone.png" alt="Phone Icon"> Phone:</h3>
                         <p>0915 272 7548</p>
                     </div>
+                
                     <div class="contact-block">
-                        <h3>Email:</h3>
+                        <h3><img src="asset/iconemail.png" alt="Email Icon"> Email:</h3>
                         <p>newhope.phlab@gmail.com</p>
-                        <h3>Facebook</h3>
+                    </div>
+                
+                    <div class="contact-block">
+                        <h3><img src="asset/iconfacebook.png" alt="Facebook Icon"> Facebook:</h3>
                         <a href="https://www.facebook.com/newhopephilippines/">New Hope Group</a>
-                        <p></p>
                     </div>
                 </div>
+                
     
                 <div class="contact-form">
                     <p id="success-message" class="success-message" style="display:none;">Thank you! Your question has been sent successfully.</p>
@@ -114,7 +119,7 @@
                         </div>
                     
                         <!-- Submit Button -->
-                        <button type="button" onclick="sendMail();">Send</button>
+                        <button type="button" class="sendbutton" onclick="sendMail();">Send</button>
                     </form>
                     
                 </div>
@@ -128,6 +133,23 @@
                 allowfullscreen=""
                 loading="lazy">
             </iframe>
+        </section>
+
+        <section class="website-section">
+            <h3>Visit Our Websites</h3>
+            <div class="website-container">
+                <a href="https://en.newhopeliuhe.com/" class="website-column">
+                    <img src="asset/newhopeliuhe.png" alt="Website Icon" class="website-icon">
+                    <!-- <p>New Hope Liuhe</p> -->
+                </a>
+        
+                <div class="vertical-line"></div>
+        
+                <a href="http://en.newhopegroup.com/" class="website-column">
+                    <img src="asset/newhopegroup.png" alt="Website Icon" class="website-icon">
+                    <!-- <p>New Hope Group</p> -->
+                </a>
+            </div>
         </section>
     </main>
 
@@ -191,7 +213,7 @@
                 <a href="#">Privacy Policy</a> |
                 <a href="#">Terms of Use</a> |
                 <a href="#">SMS Terms</a> |
-                <a href="#">Developer</a>
+                <a href="https://github.com/JVP02">Developer</a>
             </nav>
         </div>
     </footer>
@@ -204,6 +226,47 @@
 
 
     <script>
+        // header sub-nav js =====================================================================================================
+        document.addEventListener("DOMContentLoaded", function () {
+            const animalsMenu = document.querySelector(".menu-item[href='#']");
+            
+            if (animalsMenu) {
+                animalsMenu.addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent default behavior only for "Animals"
+
+                    let subNav = this.nextElementSibling;
+                    
+                    // Toggle the Animals sub-menu
+                    if (subNav.classList.contains("active")) {
+                        subNav.classList.remove("active");
+                    } else {
+                        // Close all other sub-menus before opening the new one
+                        document.querySelectorAll(".sub-nav").forEach((nav) => {
+                            nav.classList.remove("active");
+                        });
+                        subNav.classList.add("active");
+                    }
+                });
+            }
+
+            // Close sub-menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!event.target.closest(".main-nav ul li")) {
+                    document.querySelectorAll(".sub-nav").forEach((nav) => {
+                        nav.classList.remove("active");
+                    });
+                }
+            });
+
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector(".menu-toggle");
+            const nav = document.querySelector(".main-nav");
+
+            menuToggle.addEventListener("click", function () {
+                nav.classList.toggle("active");
+            });
+        });
+
         function sendMail() {
             (function() {
                 emailjs.init("wwheSZugwcTy53lRz");

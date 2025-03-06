@@ -1,102 +1,325 @@
-/* Top banner */
-.top-banner {
-    width: 100%;
-    height: 125px !important; /* Adjust height as needed */
+
+/* Header Style =================================================================================*/
+/* General Styling */
+body {
+    font-family: verdana, sans-serif !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Navigation Bar */
+.main-nav {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dbdadac0;
+    backdrop-filter: blur(10px); /* Optional: Adds blur effect */
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px;
+}
+
+.main-nav .logo {
+    width: auto;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-right: 50px;
+}
+
+.main-nav ul li {
+    position: relative;
+}
+
+.main-nav ul li a {
+    margin-right: 0px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #168222;
+    padding: 50px 20px;
+    display: block;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for main navigation */
+.main-nav ul li:hover > a {
+    background: #3a9537;
+    color: white;
+}
+
+
+/* Sub Navigation */
+.sub-nav {
+    position: fixed;
+    margin-top: 30px;
+    top: 100px; 
+    left: 0;
+    width: 100%;
+    background: #5c625e;
+    display: none;
     justify-content: center;
     align-items: center;
-    background: #f4f4f4; /* Fallback background */
-    overflow: hidden;
+    padding: 3px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    height: 50px; /* Set a smaller height */
 
-    /* paralleax */
-    /* background: url('asset/topbanner1.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 100px 20px; */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Moves it up */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    pointer-events: none; /* Prevent interaction when hidden */
 }
 
-.top-banner .banner-image {
-    width: 100%;
-    height: 100%;
+.sub-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Slightly reduced space between items */
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.top-banner .banner-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image stretches fully */
+.sub-nav li {
+    display: inline-block;
 }
 
-/* Responsive Adjustments */
+.sub-nav a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    line-height: 30px; /* Adjust line height for better alignment */
+}
+
+.sub-nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.sub-nav ul li img {
+    width: 50px; /* Adjust icon size */
+    height: 50px;
+    object-fit: contain; /* Prevent distortion */
+    margin-bottom: -20px; /* Space between icon and text */
+}
+
+
+.sub-nav ul li a {
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center; /* Center align */
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    gap: 0px; /* Adjust this value as needed */
+}
+
+/* Hover effect for sub-navigation */
+.sub-nav ul li a:hover {
+    font: black;
+    background: #3a9537;
+    transform: scale(1.0);
+    /* font-weight: bold; */
+}
+
+/* Hover effect for sub-navigation */
+/* .sub-nav ul li img:hover {
+    font: black;
+    background: #a63e3e;
+    transform: scale(1.1);
+} */
+
+/* Show sub-menu when active */
+.sub-nav.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all; /* Allow interaction when shown */
+}
+
+/* Responsive: Show sub-menu on click for mobile */
 @media (max-width: 768px) {
-    .top-banner {
-        height: 100px; /* Smaller height for mobile screens */
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sub-nav {
+        position: fixed;
+        top: 100px; /* Ensures it stays below the main header */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        display: none;
+    }
+
+    .sub-nav ul {
+        flex-direction: column;
+    }
+
+    .sub-nav.active {
+        display: flex;
     }
 }
 
 
-
-
-
-.buttonhollow {
-    display: inline-flex; /* Flex for centering text */
-    align-items: center;
-    justify-content: center;
+/* Position images on top of each other */
+.icon {
     position: relative;
-    padding: 20px 40px; /* Balanced padding */
-    border: 2px solid #168222; /* Outer border */
-    color: #168222;
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: transparent;
-    transition: all 0.3s ease-in-out;
-    border-radius: 0; /* No rounded edges */
-    overflow: hidden;
-}
-
-.buttonhollow::before {
-    content: "";
-    position: absolute;
-    top: 4px; /* Creates equal spacing around */
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
-    border: 2px solid #168222; /* Inner border */
-    transition: all 0.3s ease-in-out;
-}
-
-.buttonhollow:hover {
-    background: #168222;
-    color: #fff;
-    box-shadow: 0px 4px 10px 168222(204, 38, 44, 0.3);
-}
-
-.buttonhollow:hover::before {
-    border-color: #fff; /* Change inner border color on hover */
-}
-
-.buttonhollow:active {
-    transform: scale(0.96);
-}
-
-/* Ensure proper text alignment */
-.buttonhollow span {
-    position: relative;
-    z-index: 1;
-}
-
-/* Fix for <a> tag (if used as a button) */
-.buttonhollow a {
-    text-decoration: none;
-    color: inherit;
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    align-items: center;
 }
 
-.buttonhollow:hover a {
+/* Default icon */
+.default-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover icon - initially hidden */
+.hover-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* On hover, hide default and show hover icon */
+.sub-nav ul li a:hover .default-icon {
+    opacity: 0;
+}
+
+.sub-nav ul li a:hover .hover-icon {
+    opacity: 1;
+}
+
+
+/* Footer */
+/* FOOTER STYLING */
+footer {
+    background: #222;
+    padding: 2rem 0;
+    color: #eaeaea;
+    font-size: 0.9rem;
+}
+
+/* Footer Layout */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Each Column */
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    text-align: left;
+}
+
+.footer-column h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Links */
+.footer-column nav a {
+    display: block;
+    color: #b3b3b3;
+    margin: 0.3rem 0;
+    transition: color 200ms ease;
+}
+
+.footer-column nav a:hover {
     color: #fff;
 }
+
+/* Buttons */
+.button {
+    display: block;
+    padding: 0.8rem;
+    background: #444;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #b3b3b3;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background: #fff;
+    color: #3a9537;
+    border-color: #3a9537;
+}
+
+/* Footer Logo */
+.footer-logo {
+    width: 100%;
+    max-width: 180px;
+    display: block;
+    margin-top: 1.5rem;
+}
+
+/* Footer Bottom Section */
+.footer-info {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-info .sub-links a {
+    color: #eaeaea;
+    padding: 0 0.5rem;
+    transition: opacity 0.3s;
+}
+
+.footer-info .sub-links a:hover {
+    opacity: 0.8;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        max-width: 100%;
+    }
+}
+

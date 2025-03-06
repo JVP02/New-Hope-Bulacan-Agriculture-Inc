@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Hope</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="comp.css">
     <script defer src="script.js"></script>
     <!-- <script defer src="header.js"></script> -->
     
@@ -13,16 +13,16 @@
 <body>
     <header>
         <nav class="main-nav">
-            <a href="index.html"><img src="asset/logo.png" alt="New Hope Logo" class="logo"></a>
+            <a href="index.html">
+                <img src="asset/logo.png" alt="New Hope Logo" class="logo">
+            </a>
     
             <!-- Menu Toggle Button -->
             <div class="menu-toggle">
-                <div></div>
-                <div></div>
-                <div></div>
+                <!-- <img src="asset/icon.png" alt="Menu Icon"> -->
             </div>
     
-            <ul>
+            <ul class="nav-links">
                 <!-- Animals (Has Sub-Nav) -->
                 <li>
                     <a href="#" class="menu-item">Animals</a>
@@ -315,7 +315,7 @@
                 <a href="#">Privacy Policy</a> |
                 <a href="#">Terms of Use</a> |
                 <a href="#">SMS Terms</a> |
-                <a href="#">Developer</a>
+                <a href="https://github.com/JVP02">Developer</a>
             </nav>
         </div>
     </footer>
@@ -325,7 +325,6 @@
 
     <script>
 // header sub-nav js =====================================================================================================
-
 document.addEventListener("DOMContentLoaded", function () {
     const animalsMenu = document.querySelector(".menu-item[href='#']");
     
@@ -365,6 +364,17 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.toggle("active");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+});
+
+// Carousel Banner js =====================================================================================================
     </script>
 
 
