@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #0a0a0a;
+            background-color: #fff;
+            padding: 4rem 3rem;
+            -webkit-font-smoothing: antialiased;
+        }
+        .product-container {
+            display: flex;
+            max-width: 900px;
+            margin: auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .product-image {
+            flex: 1;
+            text-align: center;
+        }
+        .product-image img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .product-details {
+            flex: 2;
+            padding-left: 20px;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #e60023;
+            margin: 10px 0;
+        }
+        .rating-summary {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .stars {
+            color: #f4b400;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .review-count {
+            font-size: 14px;
+            color: #666;
+        }
+        .buy-button {
+            background: #0a74da;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .buy-button:hover {
+            background: #085ab4;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-image">
+            <img src="product-image.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Sample Product Name</h1>
+            <p class="product-price">$49.99</p>
+            <div class="rating-summary">
+                <div class="stars">★★★★★</div>
+                <div class="review-count">(120 reviews)</div>
+            </div>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>
