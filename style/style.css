@@ -1,3 +1,38 @@
+/* Landing */
+/* Landing */
+/* Scroll Container */
+.landing-images {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* Enables scrolling */
+    height: 100vh; /* Full screen height */
+    scroll-snap-type: y mandatory; /* Enables snap scrolling */
+    scrollbar-width: none; /* Hides scrollbar (Firefox) */
+    -ms-overflow-style: none; /* Hides scrollbar (IE/Edge) */
+}
+
+/* Hide scrollbar for Webkit browsers */
+.landing-images::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual Images */
+.landing-images img {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    object-fit: cover;
+    scroll-snap-align: start; /* Ensures images snap into place */
+}
+
+
+
+
+/* Stagger effect to overlap */
+/* .landing-images img:nth-child(1) { z-index: 1; }
+.landing-images img:nth-child(2) { z-index: 2; }
+.landing-images img:nth-child(3) { z-index: 3; } */
+
+
 /* Home Dashboard ============================================================================================================*/
 /* Carousel Container */
 .carousel-container {
@@ -148,7 +183,7 @@ OVERVIEW */
     background-color: #f9f9f9;
     margin: 20px;
     /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19); */
-    border-bottom: #168222 solid 10px;
+    border-bottom: #07a359 solid 5px;
 }
 /* .company :hover {
     transform: translateY(-5px);
@@ -169,7 +204,7 @@ OVERVIEW */
 }
 
 .company-image img {
-    border-top: #168222 solid 10px;
+    border-bottom: #07a359 solid 5px;
     max-width: 100%;
     height: auto;
     border-radius: 0px;
@@ -187,7 +222,7 @@ OVERVIEW */
 .company-text h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #168222;
+    color: #07a359;
 }
 
 .company-text p {
@@ -245,8 +280,8 @@ OVERVIEW */
     background-size: cover;
     background-attachment: fixed;
 
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 /* Top Border Image - 50% Inside, 50% Outside */
@@ -262,7 +297,7 @@ OVERVIEW */
 }
 
 .Overview h1 {
-    font-size: 3.5rem;
+    font-size: 45px;
     font-weight: bold;
     color: #2d2d2d;
     margin: 20px 0; 
@@ -313,8 +348,8 @@ OVERVIEW */
     padding: 80px 20px;
     color: white;
 
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 .products-overview h2 {
@@ -327,7 +362,7 @@ OVERVIEW */
 /* Product Grid */
 .product-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 30px; 
     max-width: 1100px;
     margin: 0 auto;
@@ -335,7 +370,7 @@ OVERVIEW */
 
 /* Individual Product Card */
 .product {
-    border-top: 10px solid #168222; /* Adds a red line on top of each product */
+    border-bottom: 5px solid #07a359; /* Adds a red line on top of each product */
     background: white;
     border-radius: 1px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -351,8 +386,8 @@ OVERVIEW */
 
 /* Product Image */
 .product img {
-    width: 100%;
-    height: 230px;
+    width: auto;
+    height: 150px;
     /* object-fit: cover; */
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
@@ -410,13 +445,13 @@ OVERVIEW */
     padding: 50px 20px;
     text-align: center;
 
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 .servicebadge-section h3{
     text-align: center;
-    color: #168222;
+    color: #07a359;
     font-size: 28px;
     margin-bottom: 16px;
 }
@@ -443,7 +478,7 @@ OVERVIEW */
 }
 
 .servicebadge-column h3 {
-    color: #168222;
+    color: #07a359;
     margin-bottom: 5px;
 }
 
@@ -476,8 +511,8 @@ OVERVIEW */
     /* background: #ffffff; */
     padding: 60px 20px;
 
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 .services-overview h2 {
@@ -501,7 +536,7 @@ OVERVIEW */
     display: flex;
     align-items: center;
     background: #d2d2d2;
-    border-top: 10px solid #168222 !important;
+    border-bottom: 5px solid #07a359 !important;
     border-radius: 0px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -536,7 +571,7 @@ OVERVIEW */
 }
 
 .service p {
-    font-size: 1rem;
+    font-size: 12px;
     color: #555;
     line-height: 1.5;
     text-align: justify;
@@ -570,64 +605,8 @@ OVERVIEW */
 }
 
 
-
-
-/* Button Container */
-/* .btn-container {
-    margin-top: auto;
-    padding-top: 10px;
-} */
-
-/* Button styles */
-/* .buttonhollow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border: 2px solid #168222;
-    color: #168222;
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: transparent;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-}
-
-.buttonhollow::before {
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
-    border: 2px solid #cc262c;
-    transition: all 0.3s ease-in-out;
-}
-
-.buttonhollow:hover {
-    background: #cc262c;
-    color: #fff;
-    box-shadow: 0px 4px 10px rgba(204, 38, 44, 0.3);
-}
-
-.buttonhollow:hover::before {
-    border-color: #fff;
-}
-
-.buttonhollow:active {
-    transform: scale(0.96);
-}
- */
-
-
-
-
- /* Info Section */
- .info-sections {
+/* Info Section */
+.info-sections {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -658,7 +637,7 @@ OVERVIEW */
 .info-block h2 {
     font-size: 28px;
     margin-bottom: 16px;
-    color: #168222;
+    color: #07a359;
 }
 
 .info-block p {
@@ -672,7 +651,7 @@ OVERVIEW */
 }
 
 .info-block .image img {
-    border-top: 10px solid #168222; /* Adds a red line on top of each product */
+    border-bottom: 5px solid #07a359; /* Adds a red line on top of each product */
 
     width: 100%;
     border-radius: 1px;
@@ -747,7 +726,7 @@ OVERVIEW */
 }
 
 .website-column h3 {
-    color: #168222;
+    color: #07a359;
     margin-bottom: 5px;
 }
 
@@ -782,10 +761,10 @@ OVERVIEW */
     margin: 20px auto;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
-    border-left: #168222 solid 10px;
+    border-left: #07a359 solid 10px;
 
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 .container {
     display: flex;
@@ -798,7 +777,7 @@ OVERVIEW */
 }
 
 .contact-info h3 {
-    color: #168222;
+    color: #07a359;
     display: flex;
     align-items: center;
     gap: 10px; /* Space between icon and text */
@@ -829,7 +808,7 @@ OVERVIEW */
 }
 
 .contact-form {
-    border-top: 5px solid #168222; /* Adds a red line on top of each product */
+    border-bottom: 5px solid #07a359; /* Adds a red line on top of each product */
     background: #a8a7a7;
     flex: 1;
     padding: 50px;
@@ -848,78 +827,6 @@ input, select, textarea {
     border: 1px solid #ccc;
     border-radius: 2px;
 }
-.sendbutton {
-    /* background-color: #298435;
-    color: white;
-    padding: 10px 80px;
-    border: none;
-    border-radius: 1px;
-    cursor: pointer; */
-
-
-    display: inline-flex; /* Flex for centering text */
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 10px 70px; /* Balanced padding */
-    border: 2px solid #168222; /* Outer border */
-    color: #168222;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: transparent;
-    transition: all 0.3s ease-in-out;
-    border-radius: 0; /* No rounded edges */
-    overflow: hidden;
-
-}
-
-.sendbutton::before {
-    content: "";
-    position: absolute;
-    top: 4px; /* Creates equal spacing around */
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
-    border: 2px solid #168222; /* Inner border */
-    transition: all 0.3s ease-in-out;
-}
-
-.sendbutton:hover {
-    background: #168222;
-    color: #fff;
-    box-shadow: 0px 4px 10px 168222(204, 38, 44, 0.3);
-}
-
-.sendbutton:hover::before {
-    border-color: #fff; /* Change inner border color on hover */
-}
-
-.sendbutton:active {
-    transform: scale(0.96);
-}
-
-/* Ensure proper text alignment */
-.sendbutton span {
-    position: relative;
-    z-index: 1;
-}
-
-/* Fix for <a> tag (if used as a button) */
-.sendbutton a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.sendbutton:hover a {
-    color: #fff;
-}
 
 
 
@@ -934,7 +841,7 @@ input, select, textarea {
 /* Responsive Google Map */
 .map-container {
     display: flex;
-    border-top: 10px solid #168222; /* Adds a red line on top of each product */
+    border-bottom: 5px solid #07a359; /* Adds a red line on top of each product */
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
     width: 100%; /* Ensures it takes full width */
@@ -1017,7 +924,7 @@ input, select, textarea {
 .hero-btn {
     display: inline-block;
     padding: 12px 24px;
-    background: #168222;
+    background: #07a359;
     color: white;
     font-size: 1rem;
     text-transform: uppercase;
@@ -1084,7 +991,7 @@ input, select, textarea {
     margin-right: 0px;
     text-decoration: none;
     font-weight: bolder;
-    color: #168222;
+    color: #07a359;
     padding: 50px 20px;
     display: block;
     font-size: 14px;
@@ -1101,7 +1008,7 @@ input, select, textarea {
 
 .productlist h2 {
     font-size: 36px;
-    color: #168222;
+    color: #07a359;
     margin-bottom: 20px;
 }
 
@@ -1123,7 +1030,7 @@ input, select, textarea {
     font-size: 12px;
     cursor: pointer;
     border-radius: 0px;
-    border: #168222 solid 3px;
+    border: #07a359 solid 3px;
     transition: background 0.3s;
 }
 
@@ -1167,7 +1074,7 @@ input, select, textarea {
 
 .productlist-sidebar ul li a {
     text-decoration: none;
-    color: #168222;
+    color: #07a359;
     font-size: 18px;
     transition: color 0.3s;
 }
@@ -1181,8 +1088,8 @@ input, select, textarea {
     flex: 1;
 
     /* web margins */
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 /* Product Section */
@@ -1196,7 +1103,7 @@ input, select, textarea {
 }
 .productlist-category h3{
     font-size: 28px;
-    color: #168222 !important;
+    color: #07a359 !important;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -1211,14 +1118,14 @@ input, select, textarea {
 /* Product List Grid */
 .productlist-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 5px;
 }
 
 /* Product List Card */
 .productlist-card {
     text-decoration: none;
-    border-bottom: #168222 solid 10px;
+    border-bottom: #07a359 solid 5px;
     background: #fff;
     border-radius: 0px;
     overflow: hidden;
@@ -1243,10 +1150,11 @@ input, select, textarea {
 .productlist-info {
     padding: 20px;
     text-align: left;
+    background-color: #ebebeb;
 }
 
 .productlist-info h3 {
-    font-size: 22px;
+    font-size: 16px;
     margin-bottom: 0px;
     color: #333;
 }
@@ -1273,3 +1181,72 @@ input, select, textarea {
 }
 
 
+/* Careers Page Container ===========================================================================================*/
+.careers-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+/* Job Listings Grid */
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Job Card Styling */
+.job-card {
+    border-bottom:#07a359 solid 3px;
+    background: white;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(0px);
+}
+
+/* Job Title */
+.job-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Location */
+.location {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Qualifications List */
+.job-card ul {
+    padding-left: 20px;
+}
+
+.job-card ul li {
+    margin-bottom: 5px;
+}
+
+/* Apply Button */
+.apply-btn {
+    margin-top: 15px;
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.apply-btn:hover {
+    background: #0056b3;
+}
