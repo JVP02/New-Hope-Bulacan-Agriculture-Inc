@@ -1,3 +1,16 @@
+// reusabble header
+// Load header.html into the #header-placeholder div
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("../components/header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data)
+        .catch(error => console.error("Error loading header:", error));
+});
+
+
+
+
+
 // header sub-nav js =====================================================================================================
 document.addEventListener("DOMContentLoaded", function () {
     const animalsMenu = document.querySelector(".menu-item[href='#']");
