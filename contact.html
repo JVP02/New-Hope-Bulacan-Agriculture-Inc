@@ -20,7 +20,6 @@
 <script src="contact.js"></script>
 </head>
 <body>
-    <!-- Replace PHP includes with static HTML -->
     <header>
         <nav class="main-nav">
             <a href="index.html">
@@ -33,6 +32,7 @@
             </div>
     
             <ul class="nav-links">
+                <li><a href="product.html" class="menu-item">About Us</a></li>
                 <!-- Animals (Has Sub-Nav) -->
                 <li>
                     <a href="#" class="menu-item">Animals</a>
@@ -117,7 +117,8 @@
                         </div>
                         <div class="contact-message">
                             <input type="text" id="subject" placeholder="Subject" required><br><br>
-                            <textarea id="message" cols="40" rows="8" placeholder="Your message here..." required></textarea><br><br>
+                            <textarea id="message" cols="40" rows="8" placeholder="Your message here..." required></textarea>
+                            <!-- <textarea id="message" cols="40" rows="8" placeholder="Your message here..." required></textarea><br><br> -->
                         </div>
                     
                         <!-- Submit Button -->
@@ -140,14 +141,14 @@
         <section class="website-section">
             <h3>Visit Our Websites</h3>
             <div class="website-container">
-                <a href="https://en.newhopeliuhe.com/" class="website-column">
+                <a href="https://en.newhopeliuhe.com/" class="website-column" target="_blank">
                     <img src="asset/newhopeliuhe.png" alt="Website Icon" class="website-icon">
                     <!-- <p>New Hope Liuhe</p> -->
                 </a>
         
                 <div class="vertical-line"></div>
         
-                <a href="http://en.newhopegroup.com/" class="website-column">
+                <a href="http://en.newhopegroup.com/" class="website-column" target="_blank">
                     <img src="asset/newhopegroup.png" alt="Website Icon" class="website-icon">
                     <!-- <p>New Hope Group</p> -->
                 </a>
@@ -226,48 +227,32 @@
 
 
 
-
+    <script src="js/carousel.js"></script>
+    <script src="js/header.js"></script>
     <script>
-        // header sub-nav js =====================================================================================================
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Check if "position" exists in URL
         document.addEventListener("DOMContentLoaded", function () {
-            const animalsMenu = document.querySelector(".menu-item[href='#']");
-            
-            if (animalsMenu) {
-                animalsMenu.addEventListener("click", function (event) {
-                    event.preventDefault(); // Prevent default behavior only for "Animals"
-
-                    let subNav = this.nextElementSibling;
-                    
-                    // Toggle the Animals sub-menu
-                    if (subNav.classList.contains("active")) {
-                        subNav.classList.remove("active");
-                    } else {
-                        // Close all other sub-menus before opening the new one
-                        document.querySelectorAll(".sub-nav").forEach((nav) => {
-                            nav.classList.remove("active");
-                        });
-                        subNav.classList.add("active");
-                    }
-                });
+            const jobTitle = getQueryParam("position");
+            if (jobTitle) {
+                const messageBox = document.getElementById("message");
+                messageBox.value = `Applying for: ${jobTitle}\n\n`; // Pre-fill textarea
             }
-
-            // Close sub-menu when clicking outside
-            document.addEventListener("click", function (event) {
-                if (!event.target.closest(".main-nav ul li")) {
-                    document.querySelectorAll(".sub-nav").forEach((nav) => {
-                        nav.classList.remove("active");
-                    });
-                }
-            });
-
-            // Mobile Menu Toggle
-            const menuToggle = document.querySelector(".menu-toggle");
-            const nav = document.querySelector(".main-nav");
-
-            menuToggle.addEventListener("click", function () {
-                nav.classList.toggle("active");
-            });
         });
+
+
+
+
+
+
+
+
+
 
         function sendMail() {
             (function() {
