@@ -15,14 +15,24 @@
             </a>
     
             <!-- Menu Toggle Button -->
-            <div class="menu-toggle">
-                <!-- <img src="asset/icon.png" alt="Menu Icon"> -->
-            </div>
+            <div class="menu-toggle"></div>
     
             <ul class="nav-links">
+                <!-- About Us (Now with Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">About Us</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="history.html">Our History</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="mission.html">Mission & Vision</a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
                 <!-- Animals (Has Sub-Nav) -->
                 <li>
-                    <a href="#" class="menu-item">Animals</a>
+                    <a href="#" class="menu-item has-subnav">Animals</a>
                     <nav class="sub-nav">
                         <ul>
                             <li><a href="fish1.html">
@@ -45,6 +55,18 @@
                     </nav>
                 </li>
     
+                <!-- News (Now with Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">News</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="latest-news.html">Latest News</a></li>
+                            <li><a href="press-releases.html">Press Releases</a></li>
+                            <li><a href="industry-updates.html">Industry Updates</a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
                 <!-- Other Menu Items (Direct Links) -->
                 <li><a href="product.html" class="menu-item">Products</a></li>
                 <li><a href="services.html" class="menu-item">Services</a></li>
@@ -59,138 +81,196 @@
             <div class="banner-image">
                 <img src="asset/topbanner2.jpg" alt="Top Banner">
             </div>
+
         </section>
 
-
+        <section class="page-banner">
+            <div class="page-image">
+                <img src="asset/topbanner2.jpg" alt="Page Banner">
+                <div class="page-content">
+                    <h3>Technology R&D</h3>
+                    <p>Striving to be a technological innovation leader in farming and food industries</p>
+                </div>
+            </div>
+        </section>
+        
         <section class="careers-container">
             <h2>Join Our Team</h2>
+            
+            <div class="careers-category">
+                <h3>Production</h3>
+            </div>
+
             <div class="job-listings">
                 <!-- Job Card 1 - Production Supervisor -->
                 <div class="job-card">
-                    <h3>Production Supervisor</h3>
-                    <p class="location">📍 Bulacan, Philippines</p>
-                    <h4>Qualifications:</h4>
-                    <ul>
-                        <li>Bachelor's Degree in Industrial Engineering, Food Technology, Agriculture, or related fields.</li>
-                        <li>At least 2 years of experience in a manufacturing or feed production environment.</li>
-                        <li>Knowledge of quality control processes and production scheduling.</li>
-                        <li>Strong leadership and problem-solving skills.</li>
-                    </ul>
-                    <a href="contact.html?position=Production%20Supervisor">
-                        <button type="button" class="sendbutton">Apply Now</button>
-                    </a>
+                    <div class="job-cover" style="background-image: url('asset/job2.png');">
+                        <h3>Production Supervisor</h3>
+                    </div>
+                    <div class="job-content">
+                        <h3>Production Supervisor</h3>
+                        <p class="location">📍 Bulacan, Philippines</p>
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>Bachelor's Degree in Industrial Engineering, Food Technology, Agriculture, or related fields.</li>
+                            <li>At least 2 years of experience in a manufacturing or feed production environment.</li>
+                            <li>Knowledge of quality control processes and production scheduling.</li>
+                            <li>Strong leadership and problem-solving skills.</li>
+                        </ul>
+                        <a href="contact.html?position=Production%20Supervisor&subject=Job%20Application">
+                            <button type="button" class="sendbutton">Apply Now</button>
+                        </a>
+                    </div>
+
                 </div>
 
                 <!-- Job Card 2 - Feed Mill Operator -->
                 <div class="job-card">
-                    <h3>Feed Mill Operator</h3>
-                    <p class="location">📍 Bulacan, Philippines</p>
-                    <h4>Qualifications:</h4>
-                    <ul>
-                        <li>High school diploma or vocational training in Mechanical, Electrical, or Agricultural Technology.</li>
-                        <li>Experience in operating feed mill machines such as mixers, pelletizers, and crushers.</li>
-                        <li>Basic knowledge of machine troubleshooting and maintenance.</li>
-                        <li>Physically fit for lifting heavy sacks and operating machinery.</li>
-                    </ul>
-                    <a href="contact.html?position=Feed%20Mill%20Operator">
-                        <button type="button" class="sendbutton">Apply Now</button>
-                    </a>
+                    <div class="job-cover" style="background-image: url('asset/job3.png');">
+                        <h3>Feed Mill Operator</h3>
+                    </div>
+                    <div class="job-content">
+                        <h3>Feed Mill Operator</h3>
+                        <p class="location">📍 Bulacan, Philippines</p>
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>High school diploma or vocational training in Mechanical, Electrical, or Agricultural Technology.</li>
+                            <li>Experience in operating feed mill machines such as mixers, pelletizers, and crushers.</li>
+                            <li>Basic knowledge of machine troubleshooting and maintenance.</li>
+                            <li>Physically fit for lifting heavy sacks and operating machinery.</li>
+                        </ul>
+                        <a href="contact.html?position=Feed%20Mill%20Operator&subject=Job%20Application">
+                            <button type="button" class="sendbutton">Apply Now</button>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Job Card 3 - Quality Control Analyst -->
                 <div class="job-card">
-                    <h3>Quality Control Analyst</h3>
-                    <p class="location">📍 Bulacan, Philippines</p>
-                    <h4>Qualifications:</h4>
-                    <ul>
-                        <li>Bachelor's Degree in Food Science, Chemistry, Animal Science, or related fields.</li>
-                        <li>Experience in lab testing of raw materials and finished feed products.</li>
-                        <li>Knowledge of HACCP, GMP, and ISO standards in feed production.</li>
-                        <li>Strong analytical and reporting skills.</li>
-                    </ul>
-                    <a href="contact.html?position=Quality%20Control%20Analyst">
-                        <button type="button" class="sendbutton">Apply Now</button>
-                    </a>
+                    <div class="job-cover" style="background-image: url('asset/job1.png');">
+                        <h3>Quality Control Analyst</h3>
+                    </div>
+                    <div class="job-content">
+                        <h3>Quality Control Analyst</h3>
+                        <p class="location">📍 Bulacan, Philippines</p>
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>Bachelor's Degree in Food Science, Chemistry, Animal Science, or related fields.</li>
+                            <li>Experience in lab testing of raw materials and finished feed products.</li>
+                            <li>Knowledge of HACCP, GMP, and ISO standards in feed production.</li>
+                            <li>Strong analytical and reporting skills.</li>
+                        </ul>
+                        <a href="contact.html?position=Quality%20Control%20Analyst&subject=Job%20Application">
+                            <button type="button" class="sendbutton">Apply Now</button>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Job Card 4 - Warehouse Coordinator -->
                 <div class="job-card">
-                    <h3>Warehouse Coordinator</h3>
-                    <p class="location">📍 Bulacan, Philippines</p>
-                    <h4>Qualifications:</h4>
-                    <ul>
-                        <li>Bachelor's Degree in Logistics, Supply Chain Management, or related fields.</li>
-                        <li>Experience in inventory control and warehouse operations.</li>
-                        <li>Familiar with ERP or inventory management systems.</li>
-                        <li>Ability to operate forklifts and manage stock rotation.</li>
-                    </ul>
-                    <a href="contact.html?position=Warehouse%20Coordinator">
-                        <button type="button" class="sendbutton">Apply Now</button>
-                    </a>
+                    <div class="job-cover" style="background-image: url('asset/job2.png');">
+                        <h3>Warehouse Coordinator</h3>
+                    </div>
+                    <div class="job-content">
+                        <h3>Warehouse Coordinator</h3>
+                        <p class="location">📍 Bulacan, Philippines</p>
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>Bachelor's Degree in Logistics, Supply Chain Management, or related fields.</li>
+                            <li>Experience in inventory control and warehouse operations.</li>
+                            <li>Familiar with ERP or inventory management systems.</li>
+                            <li>Ability to operate forklifts and manage stock rotation.</li>
+                        </ul>
+                        <a href="contact.html?position=Warehouse%20Coordinator&subject=Job%20Application">
+                            <button type="button" class="sendbutton">Apply Now</button>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Job Card 5 - Maintenance Technician -->
                 <div class="job-card">
-                    <h3>Maintenance Technician</h3>
-                    <p class="location">📍 Bulacan, Philippines</p>
-                    <h4>Qualifications:</h4>
-                    <ul>
-                        <li>Diploma or certification in Electrical, Mechanical, or Industrial Maintenance.</li>
-                        <li>Experience in repairing and maintaining feed mill equipment.</li>
-                        <li>Knowledge of electrical systems, hydraulics, and pneumatics.</li>
-                        <li>Ability to troubleshoot and repair machinery under minimal supervision.</li>
-                    </ul>
-                    <a href="contact.html?position=Maintenance%20Technician">
-                        <button type="button" class="sendbutton">Apply Now</button>
-                    </a>
+                    <div class="job-cover" style="background-image: url('asset/job3.png');">
+                        <h3>Maintenance Technician</h3>
+                    </div>
+                    <div class="job-content">
+                        <h3>Maintenance Technician</h3>
+                        <p class="location">📍 Bulacan, Philippines</p>
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>Diploma or certification in Electrical, Mechanical, or Industrial Maintenance.</li>
+                            <li>Experience in repairing and maintaining feed mill equipment.</li>
+                            <li>Knowledge of electrical systems, hydraulics, and pneumatics.</li>
+                            <li>Ability to troubleshoot and repair machinery under minimal supervision.</li>
+                        </ul>
+                        <a href="contact.html?position=Maintenance%20Technician&subject=Job%20Application">
+                            <button type="button" class="sendbutton">Apply Now</button>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Job Card 6 - Feed Formulation Specialist -->
                 <div class="job-card">
-                    <h3>Feed Formulation Specialist</h3>
-                    <p class="location">📍 Bulacan, Philippines</p>
-                    <h4>Qualifications:</h4>
-                    <ul>
-                        <li>Bachelor's Degree in Animal Nutrition, Agricultural Science, or Veterinary Medicine.</li>
-                        <li>Experience in formulating feed rations for poultry, livestock, or fish.</li>
-                        <li>Knowledge of feed additives, raw materials, and nutritional requirements.</li>
-                        <li>Strong background in feed regulatory compliance and quality assurance.</li>
-                    </ul>
-                    <a href="contact.html?position=Feed%20Formulation%20Specialist">
-                        <button type="button" class="sendbutton">Apply Now</button>
-                    </a>
+                    <div class="job-cover" style="background-image: url('asset/job1.png');">
+                        <h3>Feed Formulation Specialist</h3>
+                    </div>
+                    <div class="job-content">
+                        <h3>Feed Formulation Specialist</h3>
+                        <p class="location">📍 Bulacan, Philippines</p>
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>Bachelor's Degree in Animal Nutrition, Agricultural Science, or Veterinary Medicine.</li>
+                            <li>Experience in formulating feed rations for poultry, livestock, or fish.</li>
+                            <li>Knowledge of feed additives, raw materials, and nutritional requirements.</li>
+                            <li>Strong background in feed regulatory compliance and quality assurance.</li>
+                        </ul>
+                        <a href="contact.html?position=Feed%20Formulation%20Specialist&subject=Job%20Application">
+                            <button type="button" class="sendbutton">Apply Now</button>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Job Card 7 - Packaging & Logistics Supervisor -->
                 <div class="job-card">
-                    <h3>Packaging & Logistics Supervisor</h3>
-                    <p class="location">📍 Bulacan, Philippines</p>
-                    <h4>Qualifications:</h4>
-                    <ul>
-                        <li>Bachelor's Degree in Business Administration, Supply Chain Management, or related fields.</li>
-                        <li>Experience in packaging operations and logistics coordination.</li>
-                        <li>Familiarity with warehouse safety regulations and packaging standards.</li>
-                        <li>Strong leadership and team coordination skills.</li>
-                    </ul>
-                    <a href="contact.html?position=Packaging%20%26%20Logistics%20Supervisor">
-                        <button type="button" class="sendbutton">Apply Now</button>
-                    </a>
+                    <div class="job-cover" style="background-image: url('asset/job2.png');">
+                        <h3>Packaging & Logistics Supervisor</h3>
+                    </div>
+                    <div class="job-content">
+                        <h3>Packaging & Logistics Supervisor</h3>
+                        <p class="location">📍 Bulacan, Philippines</p>
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>Bachelor's Degree in Business Administration, Supply Chain Management, or related fields.</li>
+                            <li>Experience in packaging operations and logistics coordination.</li>
+                            <li>Familiarity with warehouse safety regulations and packaging standards.</li>
+                            <li>Strong leadership and team coordination skills.</li>
+                        </ul>
+                        <a href="contact.html?position=Packaging%20%26%20Logistics%20Supervisor&subject=Job%20Application">
+                            <button type="button" class="sendbutton">Apply Now</button>
+                        </a>
+                    </div>
+
                 </div>
 
                 <!-- Job Card 8 - Animal Nutrition Sales Representative -->
                 <div class="job-card">
-                    <h3>Animal Nutrition Sales Representative</h3>
-                    <p class="location">📍 Bulacan, Philippines</p>
-                    <h4>Qualifications:</h4>
-                    <ul>
-                        <li>Bachelor's Degree in Agriculture, Animal Science, or related fields.</li>
-                        <li>Experience in selling animal feeds and working with farmers or agribusinesses.</li>
-                        <li>Strong negotiation and communication skills.</li>
-                        <li>Willingness to travel to different farm locations.</li>
-                    </ul>
-                    <a href="contact.html?position=Animal%20Nutrition%20Sales%20Representative">
-                        <button type="button" class="sendbutton">Apply Now</button>
-                    </a>
+                    <div class="job-cover" style="background-image: url('asset/job3.png');">
+                        <h3>Animal Nutrition Sales Representative</h3>
+                    </div>
+                    <div class="job-content">
+                        <h3>Animal Nutrition Sales Representative</h3>
+                        <p class="location">📍 Bulacan, Philippines</p>
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>Bachelor's Degree in Agriculture, Animal Science, or related fields.</li>
+                            <li>Experience in selling animal feeds and working with farmers or agribusinesses.</li>
+                            <li>Strong negotiation and communication skills.</li>
+                            <li>Willingness to travel to different farm locations.</li>
+                        </ul>
+                        <a href="contact.html?position=Animal%20Nutrition%20Sales%20Representative&subject=Job%20Application">
+                            <button type="button" class="sendbutton">Apply Now</button>
+                        </a>
+                    </div>
+
                 </div>
 
                 <!-- Add more job cards as needed -->

@@ -1,96 +1,127 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
-    <style>
-        body {
-            font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #0a0a0a;
-            background-color: #fff;
-            padding: 4rem 3rem;
-            -webkit-font-smoothing: antialiased;
-        }
-        .product-container {
-            display: flex;
-            max-width: 900px;
-            margin: auto;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-            background: #f9f9f9;
-        }
-        .product-image {
-            flex: 1;
-            text-align: center;
-        }
-        .product-image img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        .product-details {
-            flex: 2;
-            padding-left: 20px;
-        }
-        .product-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .product-price {
-            font-size: 20px;
-            color: #e60023;
-            margin: 10px 0;
-        }
-        .rating-summary {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .stars {
-            color: #f4b400;
-            font-size: 18px;
-            margin-right: 10px;
-        }
-        .review-count {
-            font-size: 14px;
-            color: #666;
-        }
-        .buy-button {
-            background: #0a74da;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .buy-button:hover {
-            background: #085ab4;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div id="header-placeholder"></div> <!-- Placeholder for the header -->
+<style>
+    /* Section Layout */
+.grid2x2-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
 
-    <div class="product-container">
-        <div class="product-image">
-            <img src="product-image.jpg" alt="Product Image">
+/* Left Side: Image */
+.grid2x2-image {
+    flex: 1;
+}
+
+.grid2x2-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Right Side: Title + Cards */
+.grid2x2-content {
+    flex: 1;
+    text-align: left;
+}
+
+.grid2x2-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Card Grid (2x2 Layout) */
+.grid2x2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+}
+
+/* Individual Card Styling */
+.grid2x2-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid2x2-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon Styling */
+.grid2x2-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid2x2-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid2x2-grid {
+        grid-template-columns: 1fr; /* Stack cards in 1 column */
+    }
+}
+
+</style>
+    <section class="grid2x2-section">
+        <!-- Left Side: Image -->
+        <div class="grid2x2-image">
+            <img src="asset/5.png" alt="Descriptive Image">
         </div>
-        <div class="product-details">
-            <h1 class="product-title">Sample Product Name</h1>
-            <p class="product-price">$49.99</p>
-            <div class="rating-summary">
-                <div class="stars">★★★★★</div>
-                <div class="review-count">(120 reviews)</div>
+    
+        <!-- Right Side: Title + Cards -->
+        <div class="grid2x2-content">
+            <h2 class="grid2x2-title">Our Features</h2>
+    
+            <!-- Card Grid -->
+            <div class="grid2x2-grid">
+                <!-- Card 1 -->
+                <div class="grid2x2-card">
+                    <img src="asset/icon1.png" alt="Icon 1" class="grid2x2-icon">
+                    <h3>Quality Assurance</h3>
+                    <p>We ensure top-notch quality in all our products through rigorous testing.</p>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="grid2x2-card">
+                    <img src="asset/icon2.png" alt="Icon 2" class="grid2x2-icon">
+                    <h3>Expert Team</h3>
+                    <p>Our team consists of highly skilled professionals in the industry.</p>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="grid2x2-card">
+                    <img src="asset/icon3.png" alt="Icon 3" class="grid2x2-icon">
+                    <h3>Innovative Solutions</h3>
+                    <p>We continuously improve and innovate to meet the demands of our clients.</p>
+                </div>
+    
+                <!-- Card 4 -->
+                <div class="grid2x2-card">
+                    <img src="asset/icon4.png" alt="Icon 4" class="grid2x2-icon">
+                    <h3>Sustainable Practices</h3>
+                    <p>We prioritize sustainability and eco-friendly operations in our processes.</p>
+                </div>
             </div>
-            <button class="buy-button">Add to Cart</button>
         </div>
-    </div>
-
-
-    <script src="js/header.js"></script>
+    </section>
+    
 </body>
 </html>

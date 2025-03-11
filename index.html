@@ -18,15 +18,24 @@
             </a>
     
             <!-- Menu Toggle Button -->
-            <div class="menu-toggle">
-                <!-- <img src="asset/icon.png" alt="Menu Icon"> -->
-            </div>
+            <div class="menu-toggle"></div>
     
             <ul class="nav-links">
-                <li><a href="product.html" class="menu-item">About Us</a></li>
+                <!-- About Us (Now with Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">About Us</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="about/profile.html">Company Profile</a></li>
+                            <li><a href="about/awards.html">Awards</a></li>
+                            <li><a href="about/culture.html">Corporate Culture</a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
                 <!-- Animals (Has Sub-Nav) -->
                 <li>
-                    <a href="#" class="menu-item">Animals</a>
+                    <a href="#" class="menu-item has-subnav">Animals</a>
                     <nav class="sub-nav">
                         <ul>
                             <li><a href="fish1.html">
@@ -49,6 +58,18 @@
                     </nav>
                 </li>
     
+                <!-- News (Now with Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">News</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="latest-news.html">Latest News</a></li>
+                            <li><a href="press-releases.html">Press Releases</a></li>
+                            <li><a href="industry-updates.html">Industry Updates</a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
                 <!-- Other Menu Items (Direct Links) -->
                 <li><a href="product.html" class="menu-item">Products</a></li>
                 <li><a href="services.html" class="menu-item">Services</a></li>
@@ -57,6 +78,7 @@
             </ul>
         </nav>
     </header>
+    
     
 
     <main>
@@ -144,6 +166,62 @@
             </div>
         </section>
         
+        <div class="margin-container">
+            <section class="grid2x2-section">
+                <!-- Left Side: Image -->
+                <div class="grid2x2-image">
+                    <img src="asset/logoicon.png" alt="Descriptive Image">
+                </div>
+            
+                <!-- Right Side: Title + Cards -->
+                <div class="grid2x2-content">
+                    <div class="title">
+                        <img src="asset/bulleticon.png" alt="" class="bullet-icon">
+                        <h2>About Our Company</h2>
+                    </div>
+                    <!-- <h2 class="grid2x2-title">Our Features</h2> -->
+            
+                    <!-- Card Grid -->
+                    <div class="grid2x2-grid">
+                        <!-- Card 1 -->
+                        <div class="grid2x2-card"> 
+                            <div class="grid2x2-card-header">
+                                <img src="asset/bulleticon.png" alt="Icon 1" class="grid2x2-icon">
+                                <h3>Quality Assurance</h3>
+                            </div>
+                            <p>We ensure top-notch quality in all our products through rigorous testing.</p>
+                        </div>
+            
+                        <!-- Card 2 -->
+                        <div class="grid2x2-card"> 
+                            <div class="grid2x2-card-header">
+                                <img src="asset/bulleticon.png" alt="Icon 1" class="grid2x2-icon">
+                                <h3>Quality Assurance</h3>
+                            </div>
+                            <p>We ensure top-notch quality in all our products through rigorous testing.</p>
+                        </div>
+            
+                        <!-- Card 3 -->
+                        <div class="grid2x2-card"> 
+                            <div class="grid2x2-card-header">
+                                <img src="asset/bulleticon.png" alt="Icon 1" class="grid2x2-icon">
+                                <h3>Quality Assurance</h3>
+                            </div>
+                            <p>We ensure top-notch quality in all our products through rigorous testing.</p>
+                        </div>
+            
+                        <!-- Card 4 -->
+                        <div class="grid2x2-card"> 
+                            <div class="grid2x2-card-header">
+                                <img src="asset/bulleticon.png" alt="Icon 1" class="grid2x2-icon">
+                                <h3>Quality Assurance</h3>
+                            </div>
+                            <p>We ensure top-notch quality in all our products through rigorous testing.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <!-- Overview of the company -->
         <section class="Overview">

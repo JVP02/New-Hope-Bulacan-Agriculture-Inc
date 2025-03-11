@@ -27,15 +27,24 @@
             </a>
     
             <!-- Menu Toggle Button -->
-            <div class="menu-toggle">
-                <!-- <img src="asset/icon.png" alt="Menu Icon"> -->
-            </div>
+            <div class="menu-toggle"></div>
     
             <ul class="nav-links">
-                <li><a href="product.html" class="menu-item">About Us</a></li>
+                <!-- About Us (Now with Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">About Us</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="history.html">Our History</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="mission.html">Mission & Vision</a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
                 <!-- Animals (Has Sub-Nav) -->
                 <li>
-                    <a href="#" class="menu-item">Animals</a>
+                    <a href="#" class="menu-item has-subnav">Animals</a>
                     <nav class="sub-nav">
                         <ul>
                             <li><a href="fish1.html">
@@ -58,6 +67,18 @@
                     </nav>
                 </li>
     
+                <!-- News (Now with Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">News</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="latest-news.html">Latest News</a></li>
+                            <li><a href="press-releases.html">Press Releases</a></li>
+                            <li><a href="industry-updates.html">Industry Updates</a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
                 <!-- Other Menu Items (Direct Links) -->
                 <li><a href="product.html" class="menu-item">Products</a></li>
                 <li><a href="services.html" class="menu-item">Services</a></li>
@@ -71,6 +92,16 @@
         <section class="top-banner">
             <div class="banner-image">
                 <img src="asset/topbanner2.jpg" alt="Top Banner">
+            </div>
+        </section>
+
+        <section class="page-banner">
+            <div class="page-image">
+                <img src="asset/topbanner2.jpg" alt="Page Banner">
+                <div class="page-content">
+                    <h3>Technology R&D</h3>
+                    <p>Striving to be a technological innovation leader in farming and food industries</p>
+                </div>
             </div>
         </section>
 
@@ -232,46 +263,71 @@
     <script>
         // Function to get URL parameters
         function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        // Check if "position" exists in URL
-        document.addEventListener("DOMContentLoaded", function () {
-            const jobTitle = getQueryParam("position");
-            if (jobTitle) {
-                const messageBox = document.getElementById("message");
-                messageBox.value = `Applying for: ${jobTitle}\n\n`; // Pre-fill textarea
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
             }
-        });
+
+            // Check and set "position" and "subject" in the form
+            document.addEventListener("DOMContentLoaded", function () {
+                const jobTitle = getQueryParam("position");
+                const subjectText = getQueryParam("subject");
+
+                if (jobTitle) {
+                    const messageBox = document.getElementById("message");
+                    messageBox.value = `Applying for: ${jobTitle}\n\n`; // Pre-fill message
+                }
+
+                if (subjectText) {
+                    const subjectInput = document.getElementById("subject");
+                    subjectInput.value = subjectText; // Pre-fill subject input
+                }
+            });
 
 
 
 
-
-
-
-
-
+            
 
         function sendMail() {
             (function() {
                 emailjs.init("wwheSZugwcTy53lRz");
             })();
 
-            var params = {
-                firstname: document.querySelector("#firstname").value,
-                lastname: document.querySelector("#lastname").value,
-                phone: document.querySelector("#phone").value,
-                email: document.querySelector("#email").value,
-                address: document.querySelector("#address").value,
-                city: document.querySelector("#city").value,
-                zip: document.querySelector("#zip").value,
-                subject: document.querySelector("#subject").value,
-                message: document.querySelector("#message").value,
-                to: "johnvincentperalta923@gmail.com" // Added recipient email directly here
-            };
+            var sendButton = document.getElementById("sendButton");
 
+            // Get all required input fields
+            var firstname = document.querySelector("#firstname").value.trim();
+            var lastname = document.querySelector("#lastname").value.trim();
+            var phone = document.querySelector("#phone").value.trim();
+            var email = document.querySelector("#email").value.trim();
+            var address = document.querySelector("#address").value.trim();
+            var city = document.querySelector("#city").value.trim();
+            var zip = document.querySelector("#zip").value.trim();
+            var subject = document.querySelector("#subject").value.trim();
+            var message = document.querySelector("#message").value.trim();
+
+            // Validate if all required fields are filled
+            if (!firstname || !lastname || !phone || !email || !address || !city || !zip || !subject || !message) {
+                alert("Please fill in all required fields before sending.");
+                return; // Stop execution if validation fails
+            }
+
+            // Disable the button after clicking
+            sendButton.disabled = true;
+            sendButton.innerText = "Sending...";
+
+            var params = {
+                firstname: firstname,
+                lastname: lastname,
+                phone: phone,
+                email: email,
+                address: address,
+                city: city,
+                zip: zip,
+                subject: subject,
+                message: message,
+                to: "johnvincentperalta923@gmail.com"
+            };
 
             var serviceID = "service_j54obog";
             var templateID = "template_8v4o7g8";
@@ -279,11 +335,36 @@
             emailjs.send(serviceID, templateID, params)
             .then(res => {
                 alert("Email sent successfully!");
+
+                // Start 30-second countdown
+                let countdown = 30;
+                sendButton.innerText = `Wait ${countdown}s`;
+
+                let timer = setInterval(() => {
+                    countdown--;
+                    sendButton.innerText = `Wait ${countdown}s`;
+
+                    if (countdown <= 0) {
+                        clearInterval(timer);
+                        sendButton.innerText = "Send";
+                        sendButton.disabled = false; // Re-enable the button
+                    }
+                }, 1000);
             })
             .catch(err => {
                 alert("Failed to send email: " + err);
+                sendButton.innerText = "Send";
+                sendButton.disabled = false; // Re-enable the button if there's an error
             });
         }
+
+
+
+
+
+
+
+        
     </script>
 
     <!-- <script>
