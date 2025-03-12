@@ -7,6 +7,11 @@ body {
     padding: 0;
 }
 
+/* Active Page Effect */
+.nav-links .menu-item.active {
+    border-bottom: 3px solid #07a359; /* Green bottom border */
+}
+
 /* Main Navigation Bar */
 .main-nav {
     display: flex;
