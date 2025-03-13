@@ -62,3 +62,77 @@
         justify-content: center; /* Centers title and icon on mobile */
     }
 }
+
+
+/* Award Style =======================================================================================================*/
+
+/* Awards Carousel Section */
+/* Awards Carousel Section */
+.awards-carousel {
+    width: 100%;
+    padding: 20px 0;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carousel Container */
+.awardcarousel-container {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+/* Scrollable Track */
+.awardcarousel-track {
+    display: flex;
+    gap: 10px;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    overflow-x: auto; /* Allows horizontal scrolling */
+    scrollbar-width: none; /* Hides scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
+    cursor: grab;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.awardcarousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Each item (Will fit dynamically) */
+.awardcarousel-item {
+    flex: 0 0 auto; /* Prevents items from stretching */
+    width: calc(100% / 5); /* Adjust based on visible items */
+    text-align: center;
+}
+
+/* Image Styling */
+.awardcarousel-item img {
+    width: 100%;
+    border-radius: 8px;
+    pointer-events: none; /* Prevents accidental dragging */
+    user-select: none; /* Prevents highlight selection */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
