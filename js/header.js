@@ -13,26 +13,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // header sub-nav js =====================================================================================================
 document.addEventListener("DOMContentLoaded", function () {
-    const animalsMenu = document.querySelector(".menu-item[href='#']");
-    
-    if (animalsMenu) {
-        animalsMenu.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent default behavior only for "Animals"
+    // Get all menu items that have a sub-nav
+    const subNavMenus = document.querySelectorAll(".menu-item.has-subnav");
+
+    subNavMenus.forEach((menu) => {
+        menu.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
 
             let subNav = this.nextElementSibling;
-            
-            // Toggle the Animals sub-menu
+
+            // Toggle the clicked sub-menu
             if (subNav.classList.contains("active")) {
                 subNav.classList.remove("active");
             } else {
-                // Close all other sub-menus before opening the new one
+                // Close all other sub-menus before opening the clicked one
                 document.querySelectorAll(".sub-nav").forEach((nav) => {
                     nav.classList.remove("active");
                 });
                 subNav.classList.add("active");
             }
         });
-    }
+    });
 
     // Close sub-menu when clicking outside
     document.addEventListener("click", function (event) {
@@ -44,15 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Mobile Menu Toggle
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".main-nav");
-
-    menuToggle.addEventListener("click", function () {
-        nav.classList.toggle("active");
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
