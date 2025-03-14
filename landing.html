@@ -5,13 +5,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/comp.css">
+    <link rel="stylesheet" href="style/landing.css">
     <script defer src="script.js"></script>
     <!-- <script defer src="header.js"></script> -->
 </head>
 <body>
     <header>
         <nav class="main-nav">
-            <a href="index.html">
+            <a href="landing.html">
                 <img src="asset/logo.png" alt="New Hope Logo" class="logo">
             </a>
     
@@ -21,7 +22,7 @@
             <ul class="nav-links">
                 <!-- About Us (Now with Sub-Nav) -->
                 <li>
-                    <a href="#" class="menu-item has-subnav active">About Us</a>
+                    <a href="#" class="menu-item has-subnav">About Us</a>
                     <nav class="sub-nav">
                         <ul>
                             <li><a href="about/profile.html">Company Profile</a></li>
@@ -36,7 +37,7 @@
                     <a href="#" class="menu-item has-subnav">Animals</a>
                     <nav class="sub-nav">
                         <ul>
-                            <li><a href="fish1.html">
+                            <li><a href="fish/milkfish.html">
                                     <span class="icon">
                                         <img src="asset/bangusicon.png" alt="Bangus" class="default-icon">
                                         <img src="asset/bangushover.png" alt="Bangus" class="hover-icon">
@@ -44,7 +45,7 @@
                                     Milk Fish
                                 </a>
                             </li>
-                            <li><a href="fish2.html">
+                            <li><a href="fish/tilapia.html">
                                     <span class="icon">
                                         <img src="asset/tilapiaicon.png" alt="Tilapia" class="default-icon">
                                         <img src="asset/tilapiahover.png" alt="Tilapia" class="hover-icon">
@@ -61,9 +62,9 @@
                     <a href="#" class="menu-item has-subnav">News</a>
                     <nav class="sub-nav">
                         <ul>
-                            <li><a href="latest-news.html">Latest News</a></li>
-                            <li><a href="press-releases.html">Press Releases</a></li>
-                            <li><a href="industry-updates.html">Industry Updates</a></li>
+                            <li><a href="news/latestnews.html">Latest News</a></li>
+                            <li><a href="news/communityupdates.html">Community Updates</a></li>
+                            <li><a href="news/industryupdates.html">Industry Updates</a></li>
                         </ul>
                     </nav>
                 </li>
@@ -77,16 +78,100 @@
         </nav>
     </header>
 
+    <main class="landing-container">
+        <section class="landing-section section1">
+            <h1>Section 1</h1>
+            <!-- Carousel Section -->
+        </section>
 
-    <main>
-        <div class="landing-images">
-            <img src="asset/5.png" alt="">
-            <img src="asset/6.png" alt="">
-            <img src="asset/7.png" alt="">
+        <section class="landing-section section2">
+            <!-- <h1>Section 2</h1> -->
+            <section class="landingnavigation">
+                <div class="landingnavigation-container">
+                    <!-- Card 1 -->
+                    <a href="page1.html" class="landingnav-card">
+                       <div class="nav-image">
+                           <img src="asset/cover1.jpg" alt="Page 1">
+                           <div class="nav-overlay">
+                               <p>Page 1 Description</p>
+                           </div>
+                       </div>
+                       <div class="nav-title">Page 1</div>
+                    </a>
+            
+                    <a href="page1.html" class="landingnav-card">
+                        <div class="nav-image">
+                            <img src="asset/cover2.jpg" alt="Page 2">
+                            <div class="nav-overlay">
+                                <p>Page 2 Description</p>
+                            </div>
+                        </div>
+                        <div class="nav-title">Page 2</div>
+                    </a>
+
+                    <a href="page1.html" class="landingnav-card">
+                        <div class="nav-image">
+                            <img src="asset/cover3.jpg" alt="Page 3">
+                            <div class="nav-overlay">
+                                <p>Page 3 Description</p>
+                            </div>
+                        </div>
+                        <div class="nav-title">Page 3</div>
+                    </a>
+
+                    <a href="page1.html" class="landingnav-card">
+                        <div class="nav-image">
+                            <img src="asset/cover4.jpg" alt="Page 4">
+                            <div class="nav-overlay">
+                                <p>Page 4 Description</p>
+                            </div>
+                        </div>
+                        <div class="nav-title">Page 4</div>
+                    </a>
+
+                    <a href="page1.html" class="landingnav-card">
+                        <div class="nav-image">
+                            <img src="asset/cover5.jpg" alt="Page 5">
+                            <div class="nav-overlay">
+                                <p>Page 5 Description</p>
+                            </div>
+                        </div>
+                        <div class="nav-title">Page 5</div>
+                    </a>
+
+                    <a href="page1.html" class="landingnav-card">
+                        <div class="nav-image">
+                            <img src="../asset/page6.jpg" alt="Page 6">
+                            <div class="nav-overlay">
+                                <p>Page 6 Description</p>
+                            </div>
+                        </div>
+                        <div class="nav-title">Page 6</div>
+                    </a>
+                    
+
+                </div>
+            </section>            
+        </section>
+
+        <section class="landing-section section3">
+            <h1>Section 3</h1>
+        </section>
+
+        <section class="landing-section section4">
+            <h1>Section 4</h1>
+        </section>
+
+
+        <!-- Vertical Dot Indicator -->
+        <div class="dot-indicators">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
         </div>
-
-
     </main>
+    
 
     <footer>
         <div class="footer-container">
@@ -154,49 +239,62 @@
 
 
 
-    <script src="js/carousel.js"></script>
+    <!-- <script src="js/carousel.js"></script> -->
     <script src="js/header.js"></script>
-    <script defer src="js/indicator.js"></script>
+    <!-- <script defer src="js/indicator.js"></script> -->
         
-
-    
-
-
-
     <script defer src="script/indicator.js"></script>
     <script>
 
-let currentIndex = 0; // Keep track of the current image index
-let isScrolling = false; // Prevent rapid scrolling
+// Scrollable sections with vertical dot indicator
+document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    let isScrolling = false;
+    const sections = document.querySelectorAll(".landing-section");
+    const dots = document.querySelectorAll(".dot");
 
-document.addEventListener("wheel", function (event) {
-    event.preventDefault(); // Prevent default scroll behavior
-    if (isScrolling) return; // Stop multiple rapid scrolls
-
-    const images = document.querySelectorAll(".landing-images img");
-
-    function scrollToImage(index) {
-        if (index >= 0 && index < images.length) {
-            images[index].scrollIntoView({ behavior: "smooth" }); // Scroll to image
-            currentIndex = index; // Update index
+    function scrollToSection(index) {
+        if (index >= 0 && index < sections.length) {
+            sections[index].scrollIntoView({ behavior: "smooth" });
+            currentIndex = index;
+            updateDots(index);
         }
     }
 
-    if (event.deltaY > 0 && currentIndex < images.length - 1) {
-        // Scroll down
-        scrollToImage(currentIndex + 1);
-    } else if (event.deltaY < 0 && currentIndex > 0) {
-        // Scroll up
-        scrollToImage(currentIndex - 1);
+    function updateDots(index) {
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
     }
 
-    isScrolling = true; // Set cooldown
-    setTimeout(() => {
-        isScrolling = false; // Reset after 500ms (adjust for sensitivity)
-    }, 500);
+    document.addEventListener("wheel", function (event) {
+        event.preventDefault();
+        if (isScrolling) return;
 
-}, { passive: false });
+        if (event.deltaY > 0 && currentIndex < sections.length - 1) {
+            scrollToSection(currentIndex + 1); // Scroll down
+        } else if (event.deltaY < 0 && currentIndex > 0) {
+            scrollToSection(currentIndex - 1); // Scroll up
+        }
+
+        isScrolling = true;
+        setTimeout(() => isScrolling = false, 500);
+    }, { passive: false });
+
+    // Click Event for Dot Navigation
+    dots.forEach(dot => {
+        dot.addEventListener("click", function () {
+            const index = parseInt(this.getAttribute("data-index"));
+            scrollToSection(index);
+        });
+    });
+});
+
 
     </script>
+
+
+    <!-- test JS -->
+    <!-- <script src="test/test.js"></script>
+    <link rel="stylesheet" href="test/test.css"> -->
 </body>
 </html>

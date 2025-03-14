@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="main-nav">
-            <a href="index.html">
+            <a href="landing.html">
                 <img src="asset/logo.png" alt="New Hope Logo" class="logo">
             </a>
     
@@ -24,9 +24,9 @@
                     <a href="#" class="menu-item has-subnav">About Us</a>
                     <nav class="sub-nav">
                         <ul>
-                            <li><a href="history.html">Our History</a></li>
-                            <li><a href="team.html">Our Team</a></li>
-                            <li><a href="mission.html">Mission & Vision</a></li>
+                            <li><a href="about/profile.html">Company Profile</a></li>
+                            <li><a href="about/awards.html">Awards</a></li>
+                            <li><a href="about/culture.html">Corporate Culture</a></li>
                         </ul>
                     </nav>
                 </li>
@@ -36,7 +36,7 @@
                     <a href="#" class="menu-item has-subnav">Animals</a>
                     <nav class="sub-nav">
                         <ul>
-                            <li><a href="fish1.html">
+                            <li><a href="fish/milkfish.html">
                                     <span class="icon">
                                         <img src="asset/bangusicon.png" alt="Bangus" class="default-icon">
                                         <img src="asset/bangushover.png" alt="Bangus" class="hover-icon">
@@ -44,7 +44,7 @@
                                     Milk Fish
                                 </a>
                             </li>
-                            <li><a href="fish2.html">
+                            <li><a href="fish/tilapia.html">
                                     <span class="icon">
                                         <img src="asset/tilapiaicon.png" alt="Tilapia" class="default-icon">
                                         <img src="asset/tilapiahover.png" alt="Tilapia" class="hover-icon">
@@ -61,16 +61,16 @@
                     <a href="#" class="menu-item has-subnav">News</a>
                     <nav class="sub-nav">
                         <ul>
-                            <li><a href="latest-news.html">Latest News</a></li>
-                            <li><a href="press-releases.html">Press Releases</a></li>
-                            <li><a href="industry-updates.html">Industry Updates</a></li>
+                            <li><a href="news/latestnews.html">Latest News</a></li>
+                            <li><a href="news/communityupdates.html">Community Updates</a></li>
+                            <li><a href="news/industryupdates.html">Industry Updates</a></li>
                         </ul>
                     </nav>
                 </li>
     
                 <!-- Other Menu Items (Direct Links) -->
                 <li><a href="product.html" class="menu-item">Products</a></li>
-                <li><a href="services.html" class="menu-item">Services</a></li>
+                <li><a href="services.html" class="menu-item active">Services</a></li>
                 <li><a href="careers.html" class="menu-item">Careers</a></li>
                 <li><a href="contact.html" class="menu-item">Contact Us</a></li>
             </ul>
@@ -223,56 +223,7 @@
     <script src="js/header.js"></script>
     <script defer src="js/indicator.js"></script>
     <script>
-        // header sub-nav js =====================================================================================================
-        document.addEventListener("DOMContentLoaded", function () {
-            const animalsMenu = document.querySelector(".menu-item[href='#']");
-            
-            if (animalsMenu) {
-                animalsMenu.addEventListener("click", function (event) {
-                    event.preventDefault(); // Prevent default behavior only for "Animals"
-        
-                    let subNav = this.nextElementSibling;
-                    
-                    // Toggle the Animals sub-menu
-                    if (subNav.classList.contains("active")) {
-                        subNav.classList.remove("active");
-                    } else {
-                        // Close all other sub-menus before opening the new one
-                        document.querySelectorAll(".sub-nav").forEach((nav) => {
-                            nav.classList.remove("active");
-                        });
-                        subNav.classList.add("active");
-                    }
-                });
-            }
-        
-            // Close sub-menu when clicking outside
-            document.addEventListener("click", function (event) {
-                if (!event.target.closest(".main-nav ul li")) {
-                    document.querySelectorAll(".sub-nav").forEach((nav) => {
-                        nav.classList.remove("active");
-                    });
-                }
-            });
-        
-            // Mobile Menu Toggle
-            const menuToggle = document.querySelector(".menu-toggle");
-            const nav = document.querySelector(".main-nav");
-        
-            menuToggle.addEventListener("click", function () {
-                nav.classList.toggle("active");
-            });
-        });
-        
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuToggle = document.querySelector(".menu-toggle");
-            const navLinks = document.querySelector(".nav-links");
-        
-            menuToggle.addEventListener("click", function () {
-                navLinks.classList.toggle("active");
-            });
-        });
-        
+
         // Carousel Banner js =====================================================================================================
             </script>
 
