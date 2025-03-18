@@ -22,3 +22,17 @@ Careers
 
 
 Contact Us ✅
+
+
+General Code=========================================================================
+must include in every page
+================
+top
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/comp.css">
+    <script defer src="script.js"></script>
+
+bottom
+    <script src="js/header.js"></script>
+
+================
