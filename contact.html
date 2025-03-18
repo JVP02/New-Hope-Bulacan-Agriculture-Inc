@@ -153,7 +153,8 @@
                         </div>
                     
                         <!-- Submit Button -->
-                        <button type="button" class="sendbutton" onclick="sendMail();">Send</button>
+                        <button type="button" id="sendButton" class="sendbutton" onclick="sendMail();">Send</button>
+
                     </form>
                     
                 </div>
@@ -289,9 +290,9 @@
             
 
         function sendMail() {
-            (function() {
-                emailjs.init("wwheSZugwcTy53lRz");
-            })();
+            // (function() {
+            //     emailjs.init("wwheSZugwcTy53lRz");
+            // })();
 
             var sendButton = document.getElementById("sendButton");
 
@@ -317,20 +318,21 @@
             sendButton.innerText = "Sending...";
 
             var params = {
-                firstname: firstname,
-                lastname: lastname,
-                phone: phone,
-                email: email,
-                address: address,
-                city: city,
-                zip: zip,
-                subject: subject,
-                message: message,
+                first_name: firstname,
+                last_name: lastname,
+                user_phone: phone,
+                user_email: email,
+                user_address: address,
+                user_city: city,
+                user_zip: zip,
+                email_subject: subject,
+                user_message: message,
                 to: "johnvincentperalta923@gmail.com"
             };
 
+
             var serviceID = "service_j54obog";
-            var templateID = "template_7joyimt";
+            var templateID = "template_8v4o7g8";
 
             emailjs.send(serviceID, templateID, params)
             .then(res => {
@@ -351,10 +353,14 @@
                     }
                 }, 1000);
             })
+            // .catch(err => {
+            //     alert("Failed to send email: " + err);
+            //     sendButton.innerText = "Send";
+            //     sendButton.disabled = false;
+            // });
             .catch(err => {
-                alert("Failed to send email: " + err);
-                sendButton.innerText = "Send";
-                sendButton.disabled = false; // Re-enable the button if there's an error
+                console.error("Email failed to send:", err); // Logs full error details
+                alert("Failed to send email. Check the console for more details.");
             });
         }
 
