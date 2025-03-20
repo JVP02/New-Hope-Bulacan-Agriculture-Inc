@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../comp.css">
+    <link rel="stylesheet" href="../style/comp.css">
     <link rel="stylesheet" href="productstyle.css">
     <script defer src="script.js"></script>
     <!-- <script defer src="header.js"></script> -->
@@ -13,48 +13,71 @@
 <body>
     <header>
         <nav class="main-nav">
-            <a href="index.html"><img src="../asset/logo.png" alt="New Hope Logo" class="logo"></a>
+            <a href="../landing.html">
+                <img src="../asset/logo.png" alt="New Hope Logo" class="logo">
+            </a>
     
             <!-- Menu Toggle Button -->
-            <div class="menu-toggle">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <div class="menu-toggle"></div>
     
-            <ul>
-                <!-- Animals (Has Sub-Nav) -->
+            <ul class="nav-links">
+                <!-- About Us (Now with Sub-Nav) -->
                 <li>
-                    <a href="#" class="menu-item">Animals</a>
+                    <a href="#" class="menu-item has-subnav">About Us</a>
                     <nav class="sub-nav">
                         <ul>
-                            <li><a href="../fish1.html">
+                            <li><a href="../about/profile.html">Company Profile</a></li>
+                            <li><a href="../about/awards.html">Awards</a></li>
+                            <li><a href="../about/culture.html">Corporate Culture</a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
+                <!-- Animals (Has Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">Animals</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="../fish/milkfish.html">
                                     <span class="icon">
                                         <img src="../asset/bangusicon.png" alt="Bangus" class="default-icon">
                                         <img src="../asset/bangushover.png" alt="Bangus" class="hover-icon">
                                     </span>
-                                    Fish 1
-                                </a></li>
-                            <li><a href="../fish2.html">
+                                    Milk Fish
+                                </a>
+                            </li>
+                            <li><a href="../fish/tilapia.html">
                                     <span class="icon">
                                         <img src="../asset/tilapiaicon.png" alt="Tilapia" class="default-icon">
                                         <img src="../asset/tilapiahover.png" alt="Tilapia" class="hover-icon">
                                     </span>
-                                    Fish 2
-                                </a></li>
+                                    Tilapia
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+    
+                <!-- News (Now with Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">News</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="../news/latestnews.html">Latest News</a></li>
+                            <li><a href="../news/communityupdates.html">Community Updates</a></li>
+                            <li><a href="../news/industryupdates.html">Industry Updates</a></li>
                         </ul>
                     </nav>
                 </li>
     
                 <!-- Other Menu Items (Direct Links) -->
-                <li><a href="../product.html" class="menu-item">Products</a></li>
+                <li><a href="../product.html" class="menu-item active">Products</a></li>
                 <li><a href="../services.html" class="menu-item">Services</a></li>
                 <li><a href="../careers.html" class="menu-item">Careers</a></li>
                 <li><a href="../contact.html" class="menu-item">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-
 
     <main>
         <section class="top-banner">
@@ -66,104 +89,263 @@
         <section class="productprev">
             <div class="productprev-container">
                 <div class="productprev-image">
-                    <img src="../asset/phitem.png" alt="newhope">
+                    <img src="../asset/phitem.png" alt="New Hope Product">
                 </div>
                 <div class="productprev-text">
                     <h2>Product 1</h2>
                     <p>
-                        New Hope Bulacan Agriculture Inc. is dedicated to providing top-quality feeds for various animals, 
-                        ensuring the best nutrition for livestock and aquaculture. With years of expertise and a commitment 
-                        to innovation, we continue to grow and support the agricultural industry. New Hope Bulacan Agriculture Inc.
+                        Our high-quality feeds are designed to ensure optimal growth and health for fish, chickens, ducks, quails, and pigs. Formulated with scientifically balanced nutrients, our feeds improve digestion and overall performance.
                     </p>
-                    <div class="btn-container">
+                    <!-- <div class="btn-container">
                         <a href="#" class="buttonhollow">Learn More</a>
+                    </div> -->
+                </div>
+            </div>
+        
+            <!-- Product Overview Section -->
+            <div class="product-overview">
+                <h2>Product Overview</h2>
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <img src="../asset/nutrition.png" alt="Nutrition">
+                        <h3>High Nutrition</h3>
+                        <p>Scientifically formulated feeds with the right balance of protein, vitamins, and minerals.</p>
+                    </div>
+                    <div class="overview-card">
+                        <img src="../asset/growth.png" alt="Growth">
+                        <h3>Fast Growth</h3>
+                        <p>Enhances growth rate, ensuring animals reach market weight faster with healthier development.</p>
+                    </div>
+                    <div class="overview-card">
+                        <img src="../asset/quality.png" alt="Quality">
+                        <h3>Quality Assurance</h3>
+                        <p>Produced with strict quality control to ensure safety, consistency, and effectiveness.</p>
                     </div>
                 </div>
             </div>
-            <!-- Full-width paragraph below -->
-            <!-- <div class="productprev-description">
-                <p>
-                    Established with a vision to revolutionize the agricultural industry, New Hope Bulacan Agriculture Inc. 
-                    continuously develops high-quality feeds to meet the demands of farmers and livestock producers. Our 
-                    commitment to excellence has helped us build strong partnerships and deliver outstanding results.
-                </p> <br>
-                <p>
-                    Established with a vision to revolutionize the agricultural industry, New Hope Bulacan Agriculture Inc. 
-                    continuously develops high-quality feeds to meet the demands of farmers and livestock producers. Our 
-                    commitment to excellence has helped us build strong partnerships and deliver outstanding results.
-                </p> <br>
-                <p>
-                    Established with a vision to revolutionize the agricultural industry, New Hope Bulacan Agriculture Inc. 
-                    continuously develops high-quality feeds to meet the demands of farmers and livestock producers. Our 
-                    commitment to excellence has helped us build strong partnerships and deliver outstanding results.
-                </p> <br>
-                <p>
-                    Established with a vision to revolutionize the agricultural industry, New Hope Bulacan Agriculture Inc. 
-                    continuously develops high-quality feeds to meet the demands of farmers and livestock producers. Our 
-                    commitment to excellence has helped us build strong partnerships and deliver outstanding results.
-                </p>
-            </div> -->
-        </section>
-
-            <script>
-                // header sub-nav js =====================================================================================================
-document.addEventListener("DOMContentLoaded", function () {
-    const animalsMenu = document.querySelector(".menu-item[href='#']");
-    
-    if (animalsMenu) {
-        animalsMenu.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent default behavior only for "Animals"
-
-            let subNav = this.nextElementSibling;
-            
-            // Toggle the Animals sub-menu
-            if (subNav.classList.contains("active")) {
-                subNav.classList.remove("active");
-            } else {
-                // Close all other sub-menus before opening the new one
-                document.querySelectorAll(".sub-nav").forEach((nav) => {
-                    nav.classList.remove("active");
-                });
-                subNav.classList.add("active");
-            }
-        });
-    }
-
-    // Close sub-menu when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!event.target.closest(".main-nav ul li")) {
-            document.querySelectorAll(".sub-nav").forEach((nav) => {
-                nav.classList.remove("active");
-            });
-        }
-    });
-
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".main-nav");
-
-    menuToggle.addEventListener("click", function () {
-        nav.classList.toggle("active");
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-    });
-});
-
-            </script>
-
-
-
-
-
-
+        
+            <!-- Product Benefits Section -->
+            <div class="product-benefits">
+                <h2>Key Benefits</h2>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <span class="icon">✔</span>
+                        <p>Boosts immune system and resistance to diseases.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="icon">✔</span>
+                        <p>Improves feed conversion efficiency, reducing costs.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="icon">✔</span>
+                        <p>Made from premium, natural ingredients with no harmful additives.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Product Features Section -->
+            <div class="product-features">
+                <h2>Features</h2>
+                <div class="features-accordion">
+                    <div class="feature">
+                        <button class="accordion-btn">Advanced Formulation</button>
+                        <div class="panel">
+                            <p>Each feed formula is developed using cutting-edge research to maximize efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <button class="accordion-btn">Eco-Friendly Production</button>
+                        <div class="panel">
+                            <p>Our feeds are produced using sustainable practices that protect the environment.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <button class="accordion-btn">Tested & Approved</button>
+                        <div class="panel">
+                            <p>All products undergo rigorous testing to meet national and international standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Questions?</h4>
+                <p>One of our nutrition experts may be able to help.</p>
+                <a class="button" href="/ask-an-expert">Ask an Expert</a>
+                <h4>Our Partners</h4>
+                <nav>
+                    <a href="https://www.mazuri.com" target="_blank">Mazuri® Exotic Animal Nutrition</a>
+                    <a href="http://www.fortivaimpact.com/">Fortiva™</a>
+                    <a href="https://www.winfieldunited.com" target="_blank">WinField® United</a>
+                    <a href="https://www.landolakesinc.com" target="_blank">Land O'Lakes, Inc.</a>
+                    <a href="/milk-replacer">Land O'Lakes® Animal Milk Solutions</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h4>Animals</h4>
+                <nav>
+                    <a href="/horse-feed">Horse</a>
+                    <a href="/dairy-feed">Dairy</a>
+                    <a href="/cattle-feed">Cattle</a>
+                    <a href="/chicken-feed">Backyard Poultry</a>
+                    <a href="/swine-feed">Swine</a>
+                    <a href="/goat-feed">Goat</a>
+                    <a href="/sheep-feed">Sheep</a>
+                    <a href="/rabbit-food">Rabbit</a>
+                    <a href="/fish-and-aquatics-feed">Fish</a>
+                    <a href="/deer-feed">Deer</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h4>About New Hope</h4>
+                <nav>
+                    <a href="/about-us">About</a>
+                    <a href="/ask-an-expert">Contact Us</a>
+                    <a href="/events">Events</a>
+                    <a href="/news">News</a>
+                    <a href="/shop">Shop Online</a>
+                    <a href="/careers">Careers</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h4>Retail Business</h4>
+                <a class="button" href="/businesslink/login">Community Login</a>
+                <a class="button" href="/become-a-purina-dealer">Become a Dealer</a>
+                <a href="/"><img class="footer-logo" alt="Purina Logo" src="../asset/logo.png"></a>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p class="copyright">© 2025 New Hope Bulacan Agriculture Inc. All Rights Reserved.</p>
+            <nav class="sub-links">
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Use</a> |
+                <a href="#">SMS Terms</a> |
+                <a href="https://github.com/JVP02">Developer</a>
+            </nav>
+        </div>
+    </footer>
+
+            
+
+
+
+
+
+
+    <script src="../js/header.js"></script>
+    <script>
+
+        // Product Overview Accordion js =====================================================================================================
+        document.addEventListener("DOMContentLoaded", function () {
+            const overviewTitle = document.querySelector(".product-overview h2");
+            const overviewCards = document.querySelector(".overview-cards");
+
+            // Initially hide the cards
+            overviewCards.style.maxHeight = "0";
+            overviewCards.style.overflow = "hidden";
+            overviewCards.style.padding = "0 15px";
+
+            overviewTitle.addEventListener("click", function () {
+                const isExpanded = overviewCards.style.maxHeight !== "0px";
+
+                if (isExpanded) {
+                    overviewCards.style.maxHeight = "0";
+                    overviewCards.style.padding = "0 15px";
+                } else {
+                    overviewCards.style.maxHeight = overviewCards.scrollHeight + "px";
+                    overviewCards.style.padding = "15px";
+                }
+            });
+        });
+
+
+        // Product Benefits Accordion js =====================================================================================================
+        document.addEventListener("DOMContentLoaded", function () {
+            const benefitsTitle = document.querySelector(".product-benefits h2");
+            const benefitsCards = document.querySelector(".benefits-list");
+
+            // Initially hide the cards
+            benefitsCards.style.maxHeight = "0";
+            benefitsCards.style.overflow = "hidden";
+            benefitsCards.style.padding = "0 15px";
+
+            benefitsTitle.addEventListener("click", function () {
+                const isExpanded = benefitsCards.style.maxHeight !== "0px";
+
+                if (isExpanded) {
+                    benefitsCards.style.maxHeight = "0";
+                    benefitsCards.style.padding = "0 15px";
+                } else {
+                    benefitsCards.style.maxHeight = benefitsCards.scrollHeight + "px";
+                    benefitsCards.style.padding = "15px";
+                }
+            });
+        });
+
+        // Product Features Accordion js =====================================================================================================
+        document.addEventListener("DOMContentLoaded", function () {
+            const featuresTitle = document.querySelector(".product-features h2");
+            const featuresCards = document.querySelector(".features-accordion");
+
+            // Initially hide the cards
+            featuresCards.style.maxHeight = "0";
+            featuresCards.style.overflow = "hidden";
+            featuresCards.style.padding = "0 15px";
+
+            featuresTitle.addEventListener("click", function () {
+                const isExpanded = featuresCards.style.maxHeight !== "0px";
+
+                if (isExpanded) {
+                    featuresCards.style.maxHeight = "0";
+                    featuresCards.style.padding = "0 15px";
+                } else {
+                    featuresCards.style.maxHeight = featuresCards.scrollHeight + "px";
+                    featuresCards.style.padding = "15px";
+                }
+            });
+        });
+
+
+
+
+
+
+
+        // Accordion js =====================================================================================================
+        document.addEventListener("DOMContentLoaded", function () {
+            const accordions = document.querySelectorAll(".accordion-btn");
+
+            accordions.forEach(button => {
+                button.addEventListener("click", function () {
+                    const panel = this.nextElementSibling;
+                    const isActive = this.classList.contains("active");
+
+                    // Close all panels before opening a new one
+                    document.querySelectorAll(".accordion-btn").forEach(btn => btn.classList.remove("active"));
+                    document.querySelectorAll(".panel").forEach(pnl => {
+                        pnl.style.maxHeight = null;
+                        pnl.style.padding = "0 15px";
+                    });
+
+                    // Toggle the clicked panel
+                    if (!isActive) {
+                        this.classList.add("active");
+                        panel.style.padding = "15px";
+                        panel.style.maxHeight = panel.scrollHeight + "px"; // Smooth expansion
+                    }
+                });
+            });
+        });
+
+
+    </script>
 
 
 
