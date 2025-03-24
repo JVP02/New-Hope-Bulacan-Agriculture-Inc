@@ -1,3 +1,7 @@
+.page-banner {
+    margin-bottom: 50px;
+}
+
 /* Category Container */
 .category {
     margin-top: 50px;
@@ -21,7 +25,7 @@
 }
 
 /* Title with Bullet Icon */
-.category-content .title {
+.category-content.title {
     display: flex;
     align-items: center; /* Aligns icon and title in one row */
     gap: 10px; /* Adds spacing between icon and text */
@@ -62,57 +66,198 @@
         justify-content: center; /* Centers title and icon on mobile */
     }
 }
+/* History Section ================================================================================================== */
+/* History Section */
+.history-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    position: relative;
+}
 
-
-/* Award Style =======================================================================================================*/
-
-/* Awards Carousel Section */
-/* Awards Carousel Section */
-.awards-carousel {
-    width: 100%;
-    padding: 20px 0;
-    background: #f4f4f4;
+/* Navigation Buttons */
+.history-navigation {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    margin-bottom: 50px;
+    
 }
 
-/* Carousel Container */
-.awardcarousel-container {
+.history-navigation button {
+    /* background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s; */
+
+    display: block;
+    padding: 10px 20px;
+    background: #444;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #b3b3b3;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.history-navigation button:hover {
+    background: #fff;
+    color: #3a9537;
+    border-color: #3a9537;
+}
+
+/* Timeline Container */
+.history-timeline {
     position: relative;
     width: 80%;
-    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
-/* Scrollable Track */
-.awardcarousel-track {
+/* Timeline Line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #0073e6;
+    transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.history-item {
     display: flex;
-    gap: 10px;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-    overflow-x: auto; /* Allows horizontal scrolling */
-    scrollbar-width: none; /* Hides scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
-    cursor: grab;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    background: white;
+    padding: 20px;
+    margin: -50px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-/* Hide scrollbar for Chrome/Safari */
-.awardcarousel-track::-webkit-scrollbar {
-    display: none;
+/* Left Side (aligned properly) */
+.history-item.left {
+    margin-right: calc(50% + 25px);
+    text-align: right;
 }
 
-/* Each item (Will fit dynamically) */
-.awardcarousel-item {
-    flex: 0 0 auto; /* Prevents items from stretching */
-    width: calc(100% / 5); /* Adjust based on visible items */
+/* Right Side (aligned properly) */
+.history-item.right {
+    margin-left: calc(54% + 25px);
+    text-align: left;
+}
+
+/* Connecting Dots */
+.history-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: #0073e6;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.history-item.left::before {
+    right: -12px;
+}
+
+.history-item.right::before {
+    left: -12px;
+}
+
+/* Content and Image */
+.history-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.history-image {
+    flex: 1;
     text-align: center;
 }
 
-/* Image Styling */
-.awardcarousel-item img {
+.history-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .history-item {
+        width: 80%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .history-item::before {
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+
+    .timeline-line {
+        left: 50%;
+    }
+}
+
+
+
+
+/* Award Style =======================================================================================================*/
+.margin-container .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Awards Carousel Section */
+/* Awards Carousel Section */
+.awards-carousel {
+    overflow: hidden;
+    position: relative;
     width: 100%;
-    border-radius: 8px;
-    pointer-events: none; /* Prevents accidental dragging */
-    user-select: none; /* Prevents highlight selection */
+    max-width: 100vw;
+}
+
+.awardcarousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.awardcarousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+
+.awardcarousel-item {
+    flex: 0 0 auto;
+    width: 350px; /* Adjust size */
+    height: auto;
+    user-select: none; /* Prevents text selection */
+    cursor: grab;
+}
+
+.awardcarousel-item img {
+    width: 200px;
+    border-radius: 10px;
+    pointer-events: none; /* Prevent accidental clicks while dragging */
 }
 
 /* Navigation Buttons */
@@ -135,4 +280,94 @@
 
 .prev:hover, .next:hover {
     background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Main Awards Section */
+.awardinfo {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.awardcontent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.awardtitle {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+}
+
+.awardsubtitle {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout for Awards */
+.awardgrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* Award Card */
+.awardcard {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.awardcard.reverse {
+    flex-direction: row-reverse;
+}
+
+.awardcard:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
+.awardimage {
+    flex: 1;
+    text-align: center;
+}
+
+.awardimage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text Styling */
+.awardtext {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.awardtext h3 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.awardtext p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .awardgrid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
