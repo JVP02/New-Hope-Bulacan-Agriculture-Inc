@@ -344,58 +344,82 @@ OVERVIEW */
     gap: 20px; 
     max-width: 1100px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 /* Individual Product Card */
+/* Product Container */
 .product {
-    border-bottom: 5px solid #07a359; /* Adds a red line on top of each product */
-    background: white;
-    border-radius: 1px;
+    position: relative;
+    background: #dfdfdf;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    border-bottom: #168222 solid 3px;
 }
 
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+/* Front Side (Default) */
+.product-front {
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Product Image */
-.product img {
+.product-front img {
     width: auto;
-    height: 150px;
-    /* object-fit: cover; */
+    height: 120px;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
 
-.product:hover img {
-    transform: scale(1.05);
-}
-
-/* Product Title */
-.product h3 {
+.product-front h3 {
     font-size: 1.1rem;
     color: #6b2b2b;
-    margin-top: 15px;
-
-}
-
-/* Product Description */
-.product p {
-    font-size: 1rem;
-    color: #555;
     margin-top: 10px;
-    line-height: 1.5;
 }
 
-/* product overview button */
-.products-overview .buttonhollow {
-    margin-top: 50px;
+/* Product Back (Fixing Offset) */
+/* Product Back (Fixing Text Offset) */
+.product-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 163, 89, 0.95);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0; /* Remove unnecessary padding */
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
 }
+
+/* Ensuring Text is Perfectly Centered */
+.product-back p {
+    margin: 0 auto; /* Centers the text block */
+    max-width: 90%; /* Prevents text from hitting edges */
+    word-wrap: break-word; /* Ensures long words don't break alignment */
+    text-align: center; /* Explicitly center-align text */
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* When Active, Hide Front & Show Back */
+.product.active .product-front {
+    opacity: 0;
+}
+
+.product.active .product-back {
+    opacity: 1;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -990,7 +1014,7 @@ input, select, textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #dbdadac0;
+    background: #dbdbdac0;
     backdrop-filter: blur(10px); /* Optional: Adds blur effect */
     padding: 15px;
     /* position: fixed; */
@@ -1038,25 +1062,43 @@ input, select, textarea {
 }
 
 /* Tab Navigation */
+/* Tab Navigation */
 .productlist-tabs {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 30px;
-    /* background-color: #0056b3; */
-    /* position: sticky; */
 }
 
 .tab-link {
     background: #ffffff;
     color: rgb(0, 0, 0);
-    border: none;
-    padding: 12px 20px;
-    font-size: 12px;
+    border: #07a359 solid 3px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 0px;
-    border: #07a359 solid 3px;
     transition: background 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Separates the icon and text */
+    text-align: center;
+    height: 150px;
+    width: 150px;
+    padding: 15px 0; /* Ensures even spacing */
+}
+
+/* Centers the image without affecting its size */
+.tab-link img {
+    display: block;
+    margin: auto;
+}
+
+/* Moves the text to the bottom */
+.tab-link span {
+    margin-top: auto; /* Pushes text to the bottom */
+    padding-bottom: 10px; /* Adds some space */
 }
 
 .tab-link:hover {

@@ -5,8 +5,9 @@ body {
     font-family: verdana, sans-serif !important;
     margin: 0;
     padding: 0;
+    background: #f9f9f9;
 }
-
+/* Header Style 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 */
 /* Active Page Effect */
 .nav-links .menu-item.active {
     border-bottom: 3px solid #07a359; /* Green bottom border */
@@ -227,8 +228,8 @@ body {
 .sub-nav ul li a:hover .hover-icon {
     opacity: 1;
 }
-
-
+/* Header Style 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 */
+/* Footer Style 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 */
 /* Footer */
 /* FOOTER STYLING */
 footer {
@@ -338,7 +339,8 @@ footer {
         max-width: 100%;
     }
 }
-
+/* Footer Style 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 */
+/* Main  Style ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ */
 /* Main Style ==================================================================================================== */
 /* Top banner */
 .top-banner {
@@ -740,5 +742,189 @@ footer {
 
     .grid2x2-card-header {
         justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+/* Center Container 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫 */
+/* Centercont Section */
+.centercont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh; /* Full viewport height */
+    padding: 20px;
+}
+
+/* Content Wrapper */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Prevents text from being too wide */
+}
+
+/* Image */
+.center-content img {
+    width: 500px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Title */
+.center-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+.center-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* 3 Grid Card 3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣3️⃣*/
+
+/* Three Grid Container */
+.threegridcont {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Title & Paragraph */
+.threegridcont h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.threegridcont p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.threegrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Grid Item */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Image */
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Title (Overlapping Image) */
+.grid-item h3 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background: rgba(0, 0, 0, 0.7); */
+    color: white;
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .threegrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* /* 3 Grid Card 🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔳🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔳🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔳🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔳🔲🔲 */
+/* Three Card Container */
+.threecardcont {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Title & Paragraph */
+.threecardcont h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.threecardcont p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.threecard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Card */
+.card-item {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Image */
+.card-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Title */
+.card-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Paragraph */
+.card-item p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .threecard {
+        grid-template-columns: 1fr;
     }
 }

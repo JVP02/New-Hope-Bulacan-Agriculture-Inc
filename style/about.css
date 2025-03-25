@@ -67,122 +67,92 @@
     }
 }
 /* History Section ================================================================================================== */
-/* History Section */
 .history-section {
     text-align: center;
     padding: 50px 20px;
     background-color: #f8f8f8;
-    position: relative;
 }
 
-/* Navigation Buttons */
+/* Horizontal Navigation */
 .history-navigation {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    margin-bottom: 50px;
-    
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .history-navigation button {
-    /* background: #0073e6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: 0.3s; */
-
-    display: block;
-    padding: 10px 20px;
-    background: #444;
-    color: #fff;
-    text-align: center;
-    border: 2px solid #b3b3b3;
-    font-weight: bold;
-    transition: all 0.3s;
-    margin-top: 1rem;
-    text-decoration: none;
-}
-
-.history-navigation button:hover {
-    background: #fff;
-    color: #3a9537;
-    border-color: #3a9537;
-}
-
-/* Timeline Container */
-.history-timeline {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-/* Timeline Line */
-.timeline-line {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: #0073e6;
-    transform: translateX(-50%);
-}
-
-/* Timeline Items */
-.history-item {
-    display: flex;
+    display: inline-flex; /* Flex for centering text */
     align-items: center;
-    justify-content: space-between;
-    width: 40%;
-    background: white;
-    padding: 20px;
-    margin: -50px 0;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
     position: relative;
+    padding: 20px 40px; /* Balanced padding */
+    border: 2px solid #168222; /* Outer border */
+    color: #168222;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0; /* No rounded edges */
+    overflow: hidden;
 }
 
-/* Left Side (aligned properly) */
-.history-item.left {
-    margin-right: calc(50% + 25px);
-    text-align: right;
-}
-
-/* Right Side (aligned properly) */
-.history-item.right {
-    margin-left: calc(54% + 25px);
-    text-align: left;
-}
-
-/* Connecting Dots */
-.history-item::before {
+.history-navigation button::before {
     content: "";
     position: absolute;
-    top: 50%;
-    width: 16px;
-    height: 16px;
-    background: #0073e6;
-    border-radius: 50%;
-    border: 4px solid white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    top: 2px; /* Creates equal spacing around */
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border: 2px solid #168222; /* Inner border */
+    transition: all 0.3s ease-in-out;
 }
 
-.history-item.left::before {
-    right: -12px;
+.history-navigation button:hover,
+.history-navigation button.active {
+    background: #168222;
+    color: #fff;
+    box-shadow: 0px 4px 10px 168222(204, 38, 44, 0.3);
+
 }
 
-.history-item.right::before {
-    left: -12px;
-}
-
-/* Content and Image */
+/* History Content */
 .history-content {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 300px; /* Fixed height to prevent shifting */
+    overflow: hidden;
+}
+
+/* History Items */
+.history-item {
+    position: absolute;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.history-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Content Styling */
+.history-text {
     flex: 1;
     padding: 20px;
+    text-align: left;
 }
 
 .history-image {
@@ -193,26 +163,14 @@
 .history-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
+/* Responsive */
+@media (max-width: 768px) {
     .history-item {
-        width: 80%;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        text-align: center;
         flex-direction: column;
-    }
-
-    .history-item::before {
-        left: 50% !important;
-        transform: translateX(-50%);
-    }
-
-    .timeline-line {
-        left: 50%;
+        text-align: center;
     }
 }
 
