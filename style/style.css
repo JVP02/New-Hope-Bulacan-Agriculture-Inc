@@ -382,7 +382,6 @@ OVERVIEW */
 }
 
 /* Product Back (Fixing Offset) */
-/* Product Back (Fixing Text Offset) */
 .product-back {
     position: absolute;
     top: 0;
@@ -392,33 +391,37 @@ OVERVIEW */
     background: rgba(7, 163, 89, 0.95);
     color: white;
     display: flex;
+    flex-direction: column; /* Ensure content is stacked */
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0; /* Remove unnecessary padding */
+    padding: 0px;
     border-radius: 8px;
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
+    pointer-events: none; /* Prevents blocking interactions */
 }
 
-/* Ensuring Text is Perfectly Centered */
 .product-back p {
-    margin: 0 auto; /* Centers the text block */
-    max-width: 90%; /* Prevents text from hitting edges */
-    word-wrap: break-word; /* Ensures long words don't break alignment */
-    text-align: center; /* Explicitly center-align text */
     color: #ffffff;
-    font-size: 1.2rem;
+    margin-bottom: 15px; /* Space between text and button */
+    max-width: 90%;
 }
 
-/* When Active, Hide Front & Show Back */
+/* Ensure the button works */
+.product-back .btn-container {
+    pointer-events: auto; /* Enables clicks inside this div */
+}
+
 .product.active .product-front {
     opacity: 0;
 }
 
 .product.active .product-back {
     opacity: 1;
+    pointer-events: auto; /* Re-enable interactions on hover */
 }
+
 
 
 /* Responsive Design */
@@ -657,7 +660,8 @@ OVERVIEW */
 .info-block .image img {
     border-bottom: 5px solid #07a359; /* Adds a red line on top of each product */
 
-    width: 100%;
+    height: 244px;
+    width: 465px;
     border-radius: 1px;
     object-fit: cover;
 }
@@ -1290,6 +1294,8 @@ input, select, textarea {
     /* border-radius: 5px; */
     margin-top: 10px;
     transition: background 0.3s ease;
+    border-radius: 20px;
+    border-style: double;
 }
 
 .look-btn:hover {
