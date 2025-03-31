@@ -8,7 +8,7 @@
 /* Home Dashboard ============================================================================================================*/
 /* Carousel Container */
 .carousel-container {
-    background: #003aa1;
+    /* background: #003aa1; */
     position: relative;
     max-width: 100%;
     overflow: hidden;
@@ -180,14 +180,16 @@ OVERVIEW */
     max-width: 100%;
     height: auto;
     border-radius: 0px;
+    margin-left: 20px;
 }
 
 /* Right Side - Text */
 .company-text {
     flex: 1;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: left;
 
+    margin-left: 20px;
     margin-top: auto;
 }
 
@@ -617,7 +619,7 @@ OVERVIEW */
     display: flex;
     flex-direction: column;
     gap: 0px;
-    padding: 40px 20px;
+    padding: 0px 20px;
 }
 
 .info-block {
