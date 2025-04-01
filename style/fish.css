@@ -1,0 +1,591 @@
+/*************  ✨ Codeium Command 🌟  *************/
+/* Modern Corporate CSS for fish pages */
+:root {
+    --primary-color: #07a359;
+    --secondary-color: #00a67e;
+    --text-color: #2c3e50;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.milkfish-content {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    min-width: 360px !important;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 2rem 0;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Characteristics Section */
+.info-columns {
+    display: flex;
+    gap: 2rem;
+    margin: -1rem auto 0;
+    max-width: 1400px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.info-box {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+}
+
+.info-box h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.nutrition {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* Nutrition Section */
+.nutrition-cards {
+    display: grid; /* Change to grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Create two columns */
+    gap: 1rem; /* Add spacing between grid items */
+    padding: 1.6rem;
+    margin: -1rem auto 0;
+    max-width: 1000px;
+
+}
+
+/* Nutrition Section */
+.nutrition-card {
+    background: white;
+    border-radius: 15px; /* Restore original border radius */
+    box-shadow: var(--card-shadow);
+    display: grid; /* Use grid layout */
+    /* grid-template-columns: 2fr 3fr;  */
+    grid-template-rows: auto auto; /* Allow rows to adjust automatically */
+    gap: 1rem; /* Restore original spacing between grid items */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 0.1rem; /* Restore original padding */
+    font-size: 1rem; /* Restore original font size */
+}
+.nutrition-header {
+    max-height: 140px;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem; /* Restore original header padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+    grid-column: span 2; /* Make the header span both columns */
+    box-sizing: border-box;
+    font-size: 1rem; /* Restore original header font size */
+}
+
+.nutrition-details {
+    padding-left: 0.3rem; /* Restore original details padding */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Restore original spacing between details */
+}
+
+.nutrition-value {
+    font-size: 1.4rem; /* Restore original font size */
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.nutrition-desc {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin: 0;
+    font-size: 1rem; /* Restore original font size */
+}
+
+/* Nutrition Section */
+.nutrition-icon {
+    width: 60px; /* Increase width */
+    height: 60px; /* Increase height */
+    font-size: 2rem; /* Increase font size */
+}
+
+/* Farming Areas Section */
+.farming-content {
+    margin: -1rem auto 0;
+    max-width: 1000px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.parameters-section, .locations-section {
+    margin-bottom: 2rem;
+}
+
+.parameters-section h3, .locations-section h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.parameter-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.parameter-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.parameter-card:hover {
+    transform: translateX(5px);
+}
+
+.parameter-icon {
+    font-size: 2rem;
+    background: var(--light-gray);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.parameter-info {
+    flex-grow: 1;
+}
+
+.parameter-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.parameter-info p {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.location-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.location-card {
+    background: white;
+    border-radius: 10px;
+    padding: 0.2rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateX(5px);
+}
+
+.location-icon {
+    font-size: 2rem;
+    background: var(--light-gray);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.location-info {
+    flex-grow: 1;
+}
+
+.location-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.location-info p {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* Benefits Grid Layout - Keeping the 3x3 grid */
+.benefits-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 2rem;
+    margin: -1rem auto 0;
+    max-width: 1200px;
+}
+
+.benefit-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    background: var(--light-gray);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.benefit-content h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-content p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+/* Responsive Benefits Grid */
+@media (max-width: 1024px) {
+    .benefits-cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nutrition-card,
+    .parameter-card,
+    .location-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .nutrition-header {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .parameter-icon,
+    .location-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .nutrition-details,
+    .parameter-info,
+    .location-info {
+        padding: 1rem 0 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .benefits-cards {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-columns, .farming-info {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nutrition-cards,
+    .parameter-cards,
+    .location-cards,
+    .benefits-cards {
+        padding: 1rem;
+    }
+
+    .nutrition-header {
+        padding: 1rem;
+    }
+
+    .nutrition-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .nutrition-details,
+    .parameter-card,
+    .location-card,
+    .benefit-card {
+        padding: 1.5rem;
+    }
+
+    .cta {
+        padding: 60px 20px;
+    }
+
+    .cta h2 {
+        font-size: 2rem;
+    }
+
+    .cta p {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nutrition-cards,
+    .parameter-cards,
+    .location-cards,
+    .benefits-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nutrition-cards {
+        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
+        padding: 1rem;
+    }
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+    margin-top: 4rem;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: white;
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background: var(--light-gray);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
