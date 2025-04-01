@@ -80,13 +80,85 @@
     </header>
 
     <main class="landing-container">
-        <section class="landing-section section1">
-            <!-- <h1>Section 1</h1> -->
-            <img src="asset/banner/hopebanner.png" alt="" class="landing-backimage">
-            
+
+        <section class="landing-section carouselsec">
+            <div class="carouselsec-container">
+                <div class="carouselsec-track">
+                    <div class="carouselsec-slide">
+                        <img src="asset/carousel/contbg2.png" alt="Slide 1">
+                        <div class="carouselsec-content">
+                            <h2>Innovation in Agriculture</h2>
+                            <p>Discover our cutting-edge farming solutions</p>
+                        </div>
+                    </div>
+                    <div class="carouselsec-slide">
+                        <img src="asset/carousel/contbg3.png" alt="Slide 2">
+                        <div class="carouselsec-content">
+                            <h2>Sustainable Practices</h2>
+                            <p>Leading the way in eco-friendly farming</p>
+                        </div>
+                    </div>
+                    <div class="carouselsec-slide">
+                        <img src="asset/carousel/contbg4.png" alt="Slide 3">
+                        <div class="carouselsec-content">
+                            <h2>Quality Feed Solutions</h2>
+                            <p>Premium nutrition for optimal growth</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carouselsec-button prev" aria-label="Previous slide">&#10094;</button>
+                <button class="carouselsec-button next" aria-label="Next slide">&#10095;</button>
+                
+                <div class="carouselsec-dots">
+                    <button class="carouselsec-dot active" data-index="0" aria-label="Go to slide 1"></button>
+                    <button class="carouselsec-dot" data-index="1" aria-label="Go to slide 2"></button>
+                    <button class="carouselsec-dot" data-index="2" aria-label="Go to slide 3"></button>
+                </div>
+            </div>
         </section>
 
         <section class="landing-section section2">
+            <!-- <h1>Section 1</h1> -->
+            <div class="landcard-container">
+                <div class="landcard">
+                    <div class="landcard-content">
+                        <div class="landcard-header">
+                            <img src="asset/icons/quality-icon.png" alt="Quality Icon" class="landcard-icon">
+                            <h3>Quality Products</h3>
+                        </div>
+                        <p>Premium agricultural solutions for optimal results</p>
+                    </div>
+                </div>
+                <div class="landcard">
+                    <div class="landcard-content">
+                        <div class="landcard-header">
+                            <img src="asset/icons/support-icon.png" alt="Support Icon" class="landcard-icon">
+                            <h3>Expert Support</h3>
+                        </div>
+                        <p>Professional guidance for your farming needs</p>
+                    </div>
+                </div>
+                <div class="landcard">
+                    <div class="landcard-content">
+                        <div class="landcard-header">
+                            <img src="asset/icons/eco-icon.png" alt="Eco Icon" class="landcard-icon">
+                            <h3>Sustainable Farming</h3>
+                        </div>
+                        <p>Eco-friendly solutions for better tomorrow</p>
+                    </div>
+                </div>
+            </div>
+                    
+        </section>
+
+        <section class="landing-section section1">
+            
+        </section>
+
+        
+
+        <section class="landing-section section4">
             <!-- <h1>Section 2</h1> -->
             <section class="landingnavigation">
                 <div class="landingnavigation-container">
@@ -150,18 +222,8 @@
                         </div>
                         <div class="nav-title">Careers</div>
                     </a>
-                    
-
                 </div>
-            </section>            
-        </section>
-
-        <section class="landing-section section3">
-            <h1>Section 3</h1>
-        </section>
-
-        <section class="landing-section section4">
-            <h1>Section 4</h1>
+            </section>    
         </section>
 
 
@@ -228,7 +290,7 @@
         </div>
 
         <div class="footer-info">
-            <p class="copyright">© 2025 New Hope Bulacan Agriculture Inc. All Rights Reserved.</p>
+            <p class="copyright"> 2025 New Hope Bulacan Agriculture Inc. All Rights Reserved.</p>
             <nav class="sub-links">
                 <a href="#">Privacy Policy</a> |
                 <a href="#">Terms of Use</a> |
@@ -246,6 +308,8 @@
     <!-- <script defer src="js/indicator.js"></script> -->
         
     <script defer src="script/indicator.js"></script>
+    <script src="js/landing.js"></script>
+
     <script>
 
 // Scrollable sections with vertical dot indicator
@@ -296,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     <!-- test JS -->
-    <!-- <script src="test/test.js"></script>
-    <link rel="stylesheet" href="test/test.css"> -->
+    <!-- <script src="js/landing.js"></script> -->
+    <!-- <link rel="stylesheet" href="test/test.css"> -->
 </body>
 </html>
