@@ -2,51 +2,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tilapia</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/comp.css">
+    <link rel="stylesheet" href="../style/fish.css">
 </head>
 <body>
+
     <header>
         <nav class="main-nav">
-            <a href="index.html">
-                <img src="asset/logo.png" alt="New Hope Logo" class="logo">
+            <a href="../landing.html">
+                <img src="../asset/logo.png" alt="New Hope Logo" class="logo">
             </a>
     
             <!-- Menu Toggle Button -->
-            <div class="menu-toggle">
-                <!-- <img src="asset/icon.png" alt="Menu Icon"> -->
-            </div>
+            <div class="menu-toggle"></div>
     
             <ul class="nav-links">
-                <!-- Animals (Has Sub-Nav) -->
+                <!-- About Us (Now with Sub-Nav) -->
                 <li>
-                    <a href="#" class="menu-item">Animals</a>
+                    <a href="#" class="menu-item has-subnav">About Us</a>
                     <nav class="sub-nav">
                         <ul>
-                            <li><a href="fish1.html">
+                            <li><a href="../about/profile.html">Company Profile</a></li>
+                            <li><a href="../about/awards.html">Awards</a></li>
+                            <li><a href="../about/culture.html">Corporate Culture</a></li>
+                        </ul>
+                    </nav>
+                </li>
+    
+                <!-- Animals (Has Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav active">Animals</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="../fish/milkfish.html">
                                     <span class="icon">
-                                        <img src="asset/bangusicon.png" alt="Bangus" class="default-icon">
-                                        <img src="asset/bangushover.png" alt="Bangus" class="hover-icon">
+                                        <img src="../asset/bangusicon.png" alt="Bangus" class="default-icon">
+                                        <img src="../asset/bangushover.png" alt="Bangus" class="hover-icon">
                                     </span>
-                                    Fish 1
-                                </a></li>
-                            <li><a href="fish2.html">
+                                    Milk Fish
+                                </a>
+                            </li>
+                            <li><a href="../fish/tilapia.html">
                                     <span class="icon">
-                                        <img src="asset/tilapiaicon.png" alt="Tilapia" class="default-icon">
-                                        <img src="asset/tilapiahover.png" alt="Tilapia" class="hover-icon">
+                                        <img src="../asset/tilapiaicon.png" alt="Tilapia" class="default-icon">
+                                        <img src="../asset/tilapiahover.png" alt="Tilapia" class="hover-icon">
                                     </span>
-                                    Fish 2
-                                </a></li>
+                                    Tilapia
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+    
+                <!-- News (Now with Sub-Nav) -->
+                <li>
+                    <a href="#" class="menu-item has-subnav">News</a>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="../news/latestnews.html">Latest News</a></li>
+                            <li><a href="../news/communityupdates.html">Community Updates</a></li>
+                            <li><a href="../news/industryupdates.html">Industry Updates</a></li>
                         </ul>
                     </nav>
                 </li>
     
                 <!-- Other Menu Items (Direct Links) -->
-                <li><a href="product.html" class="menu-item">Products</a></li>
-                <li><a href="services.html" class="menu-item">Services</a></li>
-                <li><a href="careers.html" class="menu-item">Careers</a></li>
-                <li><a href="contact.html" class="menu-item">Contact Us</a></li>
+                <li><a href="../product.html" class="menu-item">Products</a></li>
+                <li><a href="../careers.html" class="menu-item">Careers</a></li>
+                <li><a href="../contact.html" class="menu-item">Contact Us</a></li>
             </ul>
         </nav>
     </header>
+    
+
+
+    <main class="milkfish-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container"> 
+                <h1>Tilapia _________</h1>
+                <p class="subtitle">A Versatile and Sustainable Aquaculture Species</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">26g</span>
+                        <span class="stat-label">Protein per 100g</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">60cm</span>
+                        <span class="stat-label">Maximum Length</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">$7.5B</span>
+                        <span class="stat-label">Global Market Value</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Characteristics Section -->
+        <section class="characteristics">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Species Characteristics</h2>
+                    <p class="section-subtitle">Understanding the Tilapia Advantage</p>
+                </div>
+                <div class="info-columns">
+                    <div class="info-box">
+                        <h3>Physical Features</h3>
+                        <ul class="feature-list">
+                            <li><span class="feature-label">Body:</span> Deep, laterally compressed body</li>
+                            <li><span class="feature-label">Tail:</span> Rounded tail fin</li>
+                            <li><span class="feature-label">Size:</span> Can grow up to 60 cm</li>
+                            <li><span class="feature-label">Weight:</span> Average 1-2 kg</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h3>Habitat Requirements</h3>
+                        <ul class="feature-list">
+                            <li><span class="feature-label">Water:</span> Freshwater and brackish water</li>
+                            <li><span class="feature-label">Type:</span> Ponds, lakes, and rivers</li>
+                            <li><span class="feature-label">Area:</span> Tropical and subtropical regions</li>
+                            <li><span class="feature-label">Adapt:</span> Wide range of salinities</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h3>Life Cycle</h3>
+                        <ul class="feature-list">
+                            <li><span class="feature-label">Growth:</span> Fast growth rate</li>
+                            <li><span class="feature-label">Maturity:</span> 4-6 months</li>
+                            <li><span class="feature-label">Breeding:</span> High reproduction rate</li>
+                            <li><span class="feature-label">Lifespan:</span> Up to 10 years</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Nutrition Section -->
+        <section class="nutrition">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nutritional Profile</h2>
+                    <p class="section-subtitle">A Healthy and Affordable Protein Source</p>
+                </div>
+                <div class="nutrition-cards">
+                    <div class="nutrition-card">
+                        <div class="nutrition-header">
+                            <img src="../asset/icons/meat.png" alt="Protein Icon" class="nutrition-icon">
+                            <h3>Protein</h3>
+                        </div>
+                        <div class="nutrition-details">
+                            <p class="nutrition-value">26g per 100g</p>
+                            <p class="nutrition-desc">High-quality protein source</p>
+                        </div>
+                    </div>
+                    <div class="nutrition-card">
+                        <div class="nutrition-header">
+                            <img src="../asset/icons/fish.png" alt="Omega-6 Icon" class="nutrition-icon">
+                            <h3>Omega-6</h3>
+                        </div>
+                        <div class="nutrition-details">
+                            <p class="nutrition-value">Rich in essential fatty acids</p>
+                            <p class="nutrition-desc">Supports heart health</p>
+                        </div>
+                    </div>
+                    <div class="nutrition-card">
+                        <div class="nutrition-header">
+                            <img src="../asset/icons/salad.png" alt="Vitamins Icon" class="nutrition-icon">
+                            <h3>Vitamins</h3>
+                        </div>
+                        <div class="nutrition-details">
+                            <p class="nutrition-value">B12, D, and Niacin</p>
+                            <p class="nutrition-desc">Essential for overall health</p>
+                        </div>
+                    </div>
+                    <div class="nutrition-card">
+                        <div class="nutrition-header">
+                            <img src="../asset/icons/bone.png" alt="Minerals Icon" class="nutrition-icon">
+                            <h3>Minerals</h3>
+                        </div>
+                        <div class="nutrition-details">
+                            <p class="nutrition-value">Phosphorus, Selenium</p>
+                            <p class="nutrition-desc">Supports bone and immune health</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Farming Areas Section -->
+        <section class="farming-areas">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Farming Areas</h2>
+                    <p class="section-subtitle">Optimal Growing Conditions</p>
+                </div>
+                <div class="farming-content">
+                    <div class="parameters-section">
+                        <h3>Water Parameters</h3>
+                        <div class="parameter-cards">
+                            <div class="parameter-card">
+                                <img src="../asset/icons/temp.png" alt="Temperature Icon" class="parameter-icon">
+                                <h4>Temperature</h4>
+                                <p>22-30°C</p>
+                            </div>
+                            <div class="parameter-card">
+                                <img src="../asset/icons/salt.png" alt="Salinity Icon" class="parameter-icon">
+                                <h4>Salinity</h4>
+                                <p>0-15 ppt</p>
+                            </div>
+                            <div class="parameter-card">
+                                <img src="../asset/icons/phlevel.png" alt="pH Icon" class="parameter-icon">
+                                <h4>pH Level</h4>
+                                <p>6.0-8.5</p>
+                            </div>
+                            <div class="parameter-card">
+                                <img src="../asset/icons/wind.png" alt="Oxygen Icon" class="parameter-icon">
+                                <h4>Oxygen</h4>
+                                <p>>5 mg/L</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="locations-section">
+                        <h3>Ideal Locations</h3>
+                        <div class="location-cards">
+                            <div class="location-card">
+                                <img src="../asset/icons/coastal.png" alt="Freshwater Icon" class="location-icon">
+                                <h4>Freshwater Ponds</h4>
+                                <p>Stable water conditions for optimal growth</p>
+                            </div>
+                            <div class="location-card">
+                                <img src="../asset/icons/estua.png" alt="Reservoir Icon" class="location-icon">
+                                <h4>Reservoirs</h4>
+                                <p>Large water bodies with controlled environments</p>
+                            </div>
+                            <div class="location-card">
+                                <img src="../asset/icons/pens.png" alt="Cages Icon" class="location-icon">
+                                <h4>Cages</h4>
+                                <p>Floating cages in lakes or rivers</p>
+                            </div>
+                            <div class="location-card">
+                                <img src="../asset/icons/rod.png" alt="Brackish Water Icon" class="location-icon">
+                                <h4>Brackish Water Farms</h4>
+                                <p>Adapted strains for mixed salinity conditions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Farming Benefits</h2>
+                    <p class="section-subtitle">Why Choose Tilapia Farming</p>
+                </div>
+                <div class="benefits-cards">
+                    <div class="benefit-card">
+                        <img src="../asset/icons/money.png" alt="Economic Icon" class="benefit-icon">
+                        <h3>Economic Value</h3>
+                        <p>Affordable production costs and high profitability</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="../asset/icons/rotate.png" alt="Adaptability Icon" class="benefit-icon">
+                        <h3>Adaptability</h3>
+                        <p>Thrives in diverse environments and farming systems</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="../asset/icons/shield.png" alt="Resilience Icon" class="benefit-icon">
+                        <h3>Resilience</h3>
+                        <p>Robust species with high resistance to diseases</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Call to Action -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Start Your Tilapia Farm?</h2>
+                <p>Let our experts guide you through the process</p>
+                <div class="cta-buttons">
+                    <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+                    <a href="../about/culture.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Questions?</h4>
+                <p>One of our nutrition experts may be able to help.</p>
+                <a class="button" href="/ask-an-expert">Ask an Expert</a>
+                <h4>Our Partners</h4>
+                <nav>
+                    <a href="https://www.mazuri.com" target="_blank">Mazuri® Exotic Animal Nutrition</a>
+                    <a href="http://www.fortivaimpact.com/">Fortiva™</a>
+                    <a href="https://www.winfieldunited.com" target="_blank">WinField® United</a>
+                    <a href="https://www.landolakesinc.com" target="_blank">Land O'Lakes, Inc.</a>
+                    <a href="/milk-replacer">Land O'Lakes® Animal Milk Solutions</a>
+                </nav>
+            </div>
+
+            <!-- <div class="footer-column">
+                <h4>Animals</h4>
+                <nav>
+                    <a href="/horse-feed">Horse</a>
+                    <a href="/dairy-feed">Dairy</a>
+                    <a href="/cattle-feed">Cattle</a>
+                    <a href="/chicken-feed">Backyard Poultry</a>
+                    <a href="/swine-feed">Swine</a>
+                    <a href="/goat-feed">Goat</a>
+                    <a href="/sheep-feed">Sheep</a>
+                    <a href="/rabbit-food">Rabbit</a>
+                    <a href="/fish-and-aquatics-feed">Fish</a>
+                    <a href="/deer-feed">Deer</a>
+                </nav>
+            </div> -->
+
+            <div class="footer-column">
+                <h4>About New Hope</h4>
+                <nav>
+                    <a href="/about-us">About</a>
+                    <a href="/ask-an-expert">Contact Us</a>
+                    <a href="/events">Events</a>
+                    <a href="/news">News</a>
+                    <a href="/shop">Shop Online</a>
+                    <a href="/careers">Careers</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h4>Retail Business</h4>
+                <a class="button" href="/businesslink/login">Community Login</a>
+                <a class="button" href="/become-a-purina-dealer">Become a Dealer</a>
+                <a href="/"><img class="footer-logo" alt="Purina Logo" src="../asset/logo.png"></a>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p class="copyright"> 2025 New Hope Bulacan Agriculture Inc. All Rights Reserved.</p>
+            <nav class="sub-links">
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Use</a> |
+                <a href="#">SMS Terms</a> |
+                <a href="https://github.com/JVP02">Developer</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="../js/header.js"></script>
+
 </body>
 </html>
