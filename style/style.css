@@ -1,4 +1,3 @@
-
 /* Stagger effect to overlap */
 /* .landing-images img:nth-child(1) { z-index: 1; }
 .landing-images img:nth-child(2) { z-index: 2; }
@@ -151,7 +150,7 @@ OVERVIEW */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 20px;
+    padding: 10px 20px;
     background-color: #f9f9f9;
     margin: 20px;
     /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19); */
@@ -922,13 +921,10 @@ input, select, textarea {
     align-items: center;
     height: 90vh; /* Adjusts hero height dynamically */
     /* background: #ffffff; */
-    background: url('../asset/herocont.png') no-repeat center center/cover;
-    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), 
-                url('asset/contbg2.png') no-repeat center center/cover; */
+    background: linear-gradient(to right, rgba(7, 163, 89, 0.8), rgba(183, 183, 183, 0.5)), url('../asset/herobg.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    /* padding: 50px 20px; */
-    padding: 0px 20px;
+    padding: 20px;
 }
 
 /* Flex container for hero */
@@ -942,41 +938,61 @@ input, select, textarea {
 
 /* Left Image */
 .productlist-hero-img img {
-    max-width: 600px;
-    /* height: auto; */
-    height: 80vh;
-    border-radius: 0px;
-    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Right Content */
 .productlist-hero-content {
     max-width: 600px;
-    text-align: right;
-    margin-left: 530px;
+    text-align: left;
 }
 
 .productlist-hero-content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
-.productlist-hero-content span {
-    font-size: 2.8rem;
-    color: #6bb92cbb;
-    margin-bottom: 10px;
-    font-weight: bold;
+.productlist-hero-content h1 span {
+    color: #00a67e;
 }
 
 .productlist-hero-content p {
-    font-size: 12px;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     line-height: 1.6;
 }
 
-/* Call-to-Action Button */
-.hero-btn {
+.hero-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.hero-features li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-features li::before {
+    content: "✔";
+    color: #00a67e;
+    font-weight: bold;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+}
+
+.button-primary {
     display: inline-block;
     padding: 12px 24px;
     background: #07a359;
@@ -984,13 +1000,32 @@ input, select, textarea {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: bold;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
-.hero-btn:hover {
+.button-primary:hover {
     background: #0e5e18;
+    transform: scale(1.05);
+}
+
+.button-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
 }
 
@@ -1005,12 +1040,21 @@ input, select, textarea {
         max-width: 80%;
     }
 
+    .productlist-hero-content {
+        text-align: center;
+    }
+
     .productlist-hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .productlist-hero-content p {
         font-size: 1rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
@@ -1449,6 +1493,7 @@ input, select, textarea {
 .job-content {
     font-size: 12px;
     padding: 10px !important;
+    margin-left: 10px !important;
 }
 
 /* Job Title */
@@ -1474,6 +1519,7 @@ input, select, textarea {
 
 .job-card ul li {
     margin-bottom: 5px;
+    padding-right: 50px;
 }
 
 /* Apply Button */

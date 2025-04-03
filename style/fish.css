@@ -266,14 +266,17 @@
 
 .parameter-icon {
     font-size: 2rem;
-    background: var(--light-gray);
+    /* background: var(--light-gray); */
+    background: var(--primary-color);
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
     flex-shrink: 0;
+
+    padding: 5px;
 }
 
 .parameter-info {
@@ -316,14 +319,17 @@
 
 .location-icon {
     font-size: 2rem;
-    background: var(--light-gray);
+    /* background: var(--light-gray); */
+    background: var(--primary-color);
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
     flex-shrink: 0;
+
+    padding: 5px;
 }
 
 .location-info {

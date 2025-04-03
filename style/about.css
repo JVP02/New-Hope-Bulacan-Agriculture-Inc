@@ -174,8 +174,68 @@
     }
 }
 
+/* Liuhe Section ================================================================================================== */
+.liuhe-cont {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
 
+.liuhe-header h2 {
+    font-size: 2.5rem;
+    color: #07a359;
+    margin-bottom: 10px;
+}
 
+.liuhe-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.liuhe-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.liuhe-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.liuhe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.liuhe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.liuhe-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.liuhe-content h3 {
+    font-size: 1.5rem;
+    color: #07a359;
+    margin-bottom: 10px;
+}
+
+.liuhe-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
 
 /* Award Style =======================================================================================================*/
 .margin-container .title {
@@ -327,5 +387,59 @@
 @media (min-width: 768px) {
     .awardgrid {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* New Sections =======================================================================================================*/
+
+
+/* Two-column layout */
+.company-columns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px;
+    align-items: start;
+    margin: 40px;
+}
+
+.nhliuhe, .nhgroup {
+    /* background-color: #f9f9f9; */
+    padding: 20px;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.nhliuhe-container, .nhgroup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.nhliuhe-image img, .nhgroup-image img {
+    width: 100%;
+    max-height: 150px;
+    max-width: 150px;
+
+}
+
+.nhliuhe-text h2, .nhgroup-text h2 {
+    font-size: 18px;
+    color: #07a359;
+    margin-bottom: 10px;
+    text-align: left !important;
+}
+
+.nhliuhe-description p, .nhgroup-description p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .company-columns-container {
+        grid-template-columns: 1fr; /* Stack columns vertically */
     }
 }
