@@ -58,30 +58,50 @@
 
 /* Hero Section */
 .hero {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    padding: 120px 0;
-    text-align: center;
+    text-align: left;
+    padding : 120px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text {
+    flex: 1;
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .hero .subtitle {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
     opacity: 0.9;
-    margin-bottom: 3rem;
 }
 
 .hero-stats {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 20px;
 }
 
 .stat-item {
@@ -90,7 +110,7 @@
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }

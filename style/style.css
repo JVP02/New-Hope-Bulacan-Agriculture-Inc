@@ -1538,3 +1538,128 @@ input, select, textarea {
 .apply-btn:hover {
     background: #0056b3;
 }
+
+/* Join Info Section ==============================================================*/
+.joininfo {
+    /* background: #f8f8f8; */
+    padding: 60px 20px;
+    text-align: justify;
+}
+
+.joininfo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .joininfo-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .joininfo-container {
+        grid-template-columns: 1fr; /* 1 card per row on very small screens */
+    }
+}
+
+.joininfo-card {
+    /* background: white; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .joininfo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+} */
+
+.joininfo-card h3 {
+    font-size: 1rem;
+    color: #07a359;
+    margin-bottom: 10px;
+}
+
+.joininfo-card p {
+    font-size: 0.8rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+/* Career Info Section ==============================================================*/
+.careerinfo {
+    /* background: #f8f8f8; */
+    padding: 60px 20px;
+    text-align: justify;
+}
+
+.careerinfo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .careerinfo-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .careerinfo-container {
+        grid-template-columns: 1fr; /* 1 card per row on very small screens */
+    }
+}
+
+.careerinfo-card {
+    /* background: white; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .joininfo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+/* ...existing code... */
+.careerinfo-container .careerinfo-card:nth-child(odd) {
+    background-color: #f8f9fa; /* Light gray for odd cards */
+}
+
+.careerinfo-container .careerinfo-card:nth-child(even) {
+    background-color: #e9ecef; /* Slightly darker gray for even cards */
+}
+
+.careerinfo-card {
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.careerinfo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.careerinfo-card h3 {
+    font-size: 1rem;
+    color: #07a359;
+    margin-bottom: 10px;
+}
+
+.careerinfo-card p {
+    font-size: 0.8rem;
+    color: #555;
+    line-height: 1.6;
+}
