@@ -48,7 +48,33 @@ Services : find a factor that will make this page necessary
 
 
 
-
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-image">
+                        <img src="../asset/milkfishhero.png" alt="Milkfish Hero Image">
+                    </div>
+                    <div class="hero-text">
+                        <h1>Tilapia _________</h1>
+                        <p class="subtitle">A Versatile and Sustainable Aquaculture Species</p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">26g</span>
+                                <span class="stat-label">Protein per 100g</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">60cm</span>
+                                <span class="stat-label">Maximum Length</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">$7.5B</span>
+                                <span class="stat-label">Market Value</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
