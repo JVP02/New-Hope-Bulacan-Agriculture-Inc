@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://your-site-url/</loc>
+        <loc>https://jvp02.github.io/nhb/</loc>
         <lastmod>2023-10-01</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://your-site-url/about/profile.html</loc>
+        <loc>https://jvp02.github.io/nhb/about/profile.html</loc>
         <lastmod>2023-10-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-site-url/fish/milkfish.html</loc>
+        <loc>https://jvp02.github.io/nhb/fish/milkfish.html</loc>
         <lastmod>2023-10-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-site-url/fish/tilapia.html</loc>
+        <loc>https://jvp02.github.io/nhb/fish/tilapia.html</loc>
         <lastmod>2023-10-01</lastmod>
         <priority>0.8</priority>
     </url>
