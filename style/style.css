@@ -1,3 +1,43 @@
+:root { 
+    /* Colors */
+    --primary-color: #07a359;
+    --secondary-color: #168222;
+    --accent-color: #6b2b2b;
+    --light-gray: #f8f8f8;
+    --medium-gray: #d2d2d2;
+    --dark-gray: #333;
+    --white: #ffffff;
+    --black: #000000;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+
+    /* Font Sizes */
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 18px;
+    --font-size-xlarge: 24px;
+    --font-size-xxlarge: 28px;
+
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+    --spacing-xlarge: 50px;
+
+    /* Border Radius */
+    --border-radius-small: 5px;
+    --border-radius-medium: 8px;
+    --border-radius-large: 10px;
+
+    /* Box Shadows */
+    --box-shadow-light: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --box-shadow-medium: 0 6px 15px rgba(0, 0, 0, 0.15);
+    --box-shadow-hover: 0px 6px 12px rgba(0, 0, 0, 0.15);
+
+    /* Transition */
+    --transition-speed: 0.3s ease-in-out;
+
+}
+
 /* Stagger effect to overlap */
 /* .landing-images img:nth-child(1) { z-index: 1; }
 .landing-images img:nth-child(2) { z-index: 2; }
@@ -7,7 +47,7 @@
 /* Home Dashboard ============================================================================================================*/
 /* Carousel Container */
 .carousel-container {
-    /* background: #003aa1; */
+    /* background: var(--primary-color); */
     position: relative;
     max-width: 100%;
     overflow: hidden;
@@ -25,7 +65,8 @@
     max-height: 610px;
     opacity: 0;
     box-sizing: border-box;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity var(--transition-speed);
+    box-shadow: var(--box-shadow-light);
 }
 
 .carousel-item img {
@@ -48,7 +89,7 @@
     color: white;
     /* background: rgba(0, 0, 0, 0.5); */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: var(--border-radius-medium);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,7 +99,7 @@
 .carousel-content {
     opacity: 0;
     /* transform: translateY(20px); */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
 }
 
 /* When slide is active, animate the content */
@@ -151,9 +192,9 @@ OVERVIEW */
     flex-direction: column;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f9f9f9;
+    background-color: var(--light-gray);
     margin: 20px;
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19); */
+    /* box-shadow: var(--box-shadow-light); */
     /* border-bottom: #07a359 solid 5px; */
 }
 /* .company :hover {
@@ -175,7 +216,7 @@ OVERVIEW */
 }
 
 .company-image img {
-    border-bottom: #07a359 solid 5px;
+    border-bottom: var(--primary-color) solid 5px;
     max-width: 100%;
     height: auto;
     border-radius: 0px;
@@ -193,16 +234,16 @@ OVERVIEW */
 }
 
 .company-text h2 {
-    font-size: 24px;
+    font-size: var(--font-size-xlarge);
     margin-bottom: 10px;
-    color: #07a359;
+    color: var(--primary-color);
 }
 
 .company-text p {
     text-align: justify;
-    font-size: 12px;
+    font-size: var(--font-size-small);
     line-height: 1.6;
-    color: #333;
+    color: var(--dark-gray);
 }
 
 /* Full-width Paragraph */
@@ -255,6 +296,8 @@ OVERVIEW */
 
     /* margin-left: 50px;
     margin-right: 50px; */
+    box-shadow: var(--box-shadow-light);
+    border-radius: var(--border-radius-medium);
 }
 
 /* Top Border Image - 50% Inside, 50% Outside */
@@ -270,9 +313,9 @@ OVERVIEW */
 }
 
 .Overview h1 {
-    font-size: 45px;
+    font-size: var(--font-size-xxlarge);
     font-weight: bold;
-    color: #2d2d2d;
+    color: var(--dark-gray);
     margin: 20px 0; 
     line-height: 1.2;
 }
@@ -282,8 +325,8 @@ OVERVIEW */
 }
 
 .Overview p {
-    font-size: 12px;
-    color: #000000;
+    font-size: var(--font-size-small);
+    color: var(--black);
     max-width: 800px;
     margin: 0 auto; 
     line-height: 1.6;
@@ -308,9 +351,28 @@ OVERVIEW */
     }
 }
 
+/*
+/* Add a subtle box shadow to the section for depth */
+.Overview {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
+}
+
+/* Responsive: Adjust text size and padding for mobile view */
+@media (max-width: 768px) {
+    .Overview h1 {
+        font-size: 2rem; 
+    }
+
+    .Overview p {
+        font-size: 1rem;
+        padding: 0 15px; 
+    }
+}
+
 /* Products Overview Section */
 .products-overview {
-    text-align: center;
+    text-align: center !important;
     /* background: #f8f8f8;  */
     padding: 60px 20px;
 
@@ -319,7 +381,7 @@ OVERVIEW */
     background-size: cover;
     background-attachment: fixed;
     padding: 80px 20px;
-    color: white;
+    color: var(--white);
 
     /* margin-left: 50px;
     margin-right: 50px; */
@@ -352,14 +414,14 @@ OVERVIEW */
 /* Product Container */
 .product {
     position: relative;
-    background: #dfdfdf;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: var(--medium-gray);
+    box-shadow: var(--box-shadow-light);
     padding: 20px;
     text-align: center;
     overflow: hidden;
     cursor: pointer;
-    transition: box-shadow 0.3s ease-in-out;
-    border-bottom: #168222 solid 3px;
+    transition: box-shadow var(--transition-speed);
+    border-bottom: var(--secondary-color) solid 3px;
 }
 
 /* Front Side (Default) */
@@ -543,19 +605,19 @@ OVERVIEW */
 .service {
     display: flex;
     align-items: center;
-    background: #d2d2d2;
-    border-bottom: 5px solid #07a359 !important;
+    background: var(--medium-gray);
+    border-bottom: var(--primary-color) solid 5px;
     border-radius: 0px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-light);
     padding: 30px;
     gap: 30px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     margin-bottom: 0%;
 }
 
 .service:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--box-shadow-hover);
 }
 
 /* Service Image */
@@ -766,13 +828,13 @@ OVERVIEW */
 
 
 .contact-section {
-    background-color: #eeebeb;
+    background-color: var(--light-gray);
     padding: 20px;
     max-width: 1100px;
     margin: 20px auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-light);
     border-radius: 0px;
-    border-left: #07a359 solid 10px;
+    border-left: var(--primary-color) solid 10px;
 
     /* margin-left: 50px;
     margin-right: 50px; */
@@ -812,6 +874,11 @@ OVERVIEW */
     margin-left: 25px;
 }
 
+.contact-block a .social-icons {
+    width: 50px;
+    height: 50;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -819,8 +886,8 @@ OVERVIEW */
 }
 
 .contact-form {
-    border-bottom: 5px solid #07a359; /* Adds a red line on top of each product */
-    background: #a8a7a7;
+    border-bottom: var(--primary-color) solid 5px;
+    background: var(--medium-gray);
     flex: 1;
     padding: 50px;
     border-radius: 0px;
@@ -921,8 +988,8 @@ input, select, textarea {
     align-items: center;
     height: 90vh; /* Adjusts hero height dynamically */
     /* background: #ffffff; */
-    background: linear-gradient(to right, rgba(7, 163, 89, 0.8), rgba(183, 183, 183, 0.5)), url('../asset/herobg.jpg') no-repeat center center/cover;
-    color: white;
+    background: linear-gradient(to right, rgba(7, 163, 89, 0.8), rgba(210, 210, 210, 0.5)), url('../asset/herobg.jpg') no-repeat center center/cover;
+    color: var(--white);
     text-align: center;
     padding: 20px;
 }
@@ -1242,12 +1309,12 @@ input, select, textarea {
 /* Product List Card */
 .productlist-card {
     text-decoration: none;
-    border-bottom: #07a359 solid 5px;
-    background: #fff;
+    border-bottom: var(--primary-color) solid 5px;
+    background: var(--white);
     border-radius: 0px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .productlist-card:hover {
@@ -1436,10 +1503,10 @@ input, select, textarea {
     position: relative;
     width: 100%;
     height: 400px;
-    border-bottom: #07a359 solid 3px;
-    background: white;
+    border-bottom: var(--primary-color) solid 3px;
+    background: var(--white);
     border-radius: 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-light);
     text-align: left;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
@@ -1633,7 +1700,7 @@ input, select, textarea {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 /* ...existing code... */
 .careerinfo-container .careerinfo-card:nth-child(odd) {
-    background-color: #f8f9fa; /* Light gray for odd cards */
+    background-color: var(--light-gray); /* Light gray for odd cards */
 }
 
 .careerinfo-container .careerinfo-card:nth-child(even) {
@@ -1643,12 +1710,11 @@ input, select, textarea {
 .careerinfo-card {
     padding: 20px;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .careerinfo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--box-shadow-hover);
 }
 
 

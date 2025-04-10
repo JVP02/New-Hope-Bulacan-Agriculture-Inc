@@ -1,3 +1,35 @@
+:root {
+    /* Colors */
+    --primary-color: #07a359;
+    --secondary-color: #168222;
+    --accent-color: #6b2b2b;
+    --light-gray: #f8f8f8;
+    --medium-gray: #d2d2d2;
+    --dark-gray: #333;
+    --white: #ffffff;
+    --black: #000000;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+
+    /* Font Sizes */
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 18px;
+    --font-size-xlarge: 24px;
+
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+
+    /* Border Radius */
+    --border-radius-small: 5px;
+    --border-radius-medium: 8px;
+
+    /* Box Shadows */
+    --box-shadow-light: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Landing */
 /* Landing */
 /* Scroll Container */
@@ -81,8 +113,8 @@ body, html {
     z-index: 0;
 }
 
-.section1 { background: #b1b1b1; } /* Green */
-.section3 { background: #e74c3c; } /* Red */
+.section1 { background: var(--medium-gray); } /* Green */
+.section3 { background: var(--accent-color); } /* Red */
 .section4 {     
     background: url('../asset/bg/wbg.jpg') no-repeat center center;
     background-size: cover;
@@ -92,7 +124,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 5rem; 
+    padding-bottom: var(--spacing-large); 
 } /* Orange */
 
 .section4::before {
@@ -102,7 +134,7 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    /* background: rgba(0, 0, 0, 0.3); */ /* Optional: adds a slight dark overlay to make cards more visible */
+    /* background: var(--overlay-color);  */
     z-index: 0;
 }
 
@@ -118,16 +150,16 @@ body, html {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: var(--spacing-small);
+    height: var(--spacing-small);
+    background-color: var(--white);
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .dot.active {
-    background-color: white; /* Active dot color */
+    background-color: var(--primary-color); /* Active dot color */
     transform: scale(1.2);
 }
 
@@ -172,7 +204,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: #07a359 4px solid;
+    border-bottom: var(--primary-color) 4px solid;
 }
 
 /* Zoom effect on image */
@@ -205,7 +237,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%; /* Covers entire image and title */
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--overlay-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,7 +257,7 @@ body, html {
     color: rgb(0, 0, 0);
     width: 100%;
     height: 20%; /* Takes up the rest of the card */
-    background: white;
+    background: var(--primary-color);
     text-align: left;
     font-size: 14px;
     font-weight: normal;
@@ -276,9 +308,9 @@ body, html {
 }
 
 .landcard {
-    background: #ebebebe6;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: var(--light-gray);
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow-light);
     overflow: hidden;
     width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -287,7 +319,7 @@ body, html {
 
 .landcard:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .landcard-header {
