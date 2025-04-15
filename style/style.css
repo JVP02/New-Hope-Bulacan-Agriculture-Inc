@@ -209,6 +209,11 @@ OVERVIEW */
     width: 100%;
 }
 
+.company-logo  {
+    width: 450px;
+    height: auto;
+}
+
 /* Left Side - Image */
 .company-image {
     flex: 1;
