@@ -7,10 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error loading header:", error));
 });
 
-
-
-
-
 // header sub-nav js =====================================================================================================
 document.addEventListener("DOMContentLoaded", function () {
     // Get all menu items that have a sub-nav
@@ -50,5 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     menuToggle.addEventListener("click", function () {
         navLinks.classList.toggle("active");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileNav = document.querySelector(".mobile-nav");
+
+    // Toggle mobile menu
+    menuToggle.addEventListener("click", function () {
+        mobileNav.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".mobile-nav") && !event.target.closest(".menu-toggle")) {
+            mobileNav.classList.remove("active");
+        }
     });
 });
