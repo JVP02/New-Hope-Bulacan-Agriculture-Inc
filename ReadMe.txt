@@ -1,176 +1,63 @@
-TODO 
-
-About Us
-1. Company Profile ✅
-2. Awards
-3. Company Culture
-
-Animals
-1. Milk Fish
-2. Tilapia
-
-News
-
-
-Products
-1. Product menu - 50% 🧡
-2. product details - 70% 💛
-3. Compare products 
-
-
-Careers - 40% 🧡
-
-
-Contact Us ✅
-
-
-General Code=========================================================================
-must include in every page
-================
-top
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/comp.css">
-    <script defer src="script.js"></script>
-
-bottom
-    <script src="js/header.js"></script>
-
-================
-
-Services : find a factor that will make this page necessary
-
-
-
-
-
-
-
-
-
-
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-image">
-                        <img src="../asset/milkfishhero.png" alt="Milkfish Hero Image">
-                    </div>
-                    <div class="hero-text">
-                        <h1>Tilapia _________</h1>
-                        <p class="subtitle">A Versatile and Sustainable Aquaculture Species</p>
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">26g</span>
-                                <span class="stat-label">Protein per 100g</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">60cm</span>
-                                <span class="stat-label">Maximum Length</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">$7.5B</span>
-                                <span class="stat-label">Market Value</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Outdated header
-
-                // header sub-nav js =====================================================================================================
-                // document.addEventListener("DOMContentLoaded", function () {
-                //     const animalsMenu = document.querySelector(".menu-item[href='#']");
-                    
-                //     if (animalsMenu) {
-                //         animalsMenu.addEventListener("click", function (event) {
-                //             event.preventDefault(); // Prevent default behavior only for "Animals"
-
-                //             let subNav = this.nextElementSibling;
-                            
-                //             // Toggle the Animals sub-menu
-                //             if (subNav.classList.contains("active")) {
-                //                 subNav.classList.remove("active");
-                //             } else {
-                //                 // Close all other sub-menus before opening the new one
-                //                 document.querySelectorAll(".sub-nav").forEach((nav) => {
-                //                     nav.classList.remove("active");
-                //                 });
-                //                 subNav.classList.add("active");
-                //             }
-                //         });
-                //     }
-
-                //     // Close sub-menu when clicking outside
-                //     document.addEventListener("click", function (event) {
-                //         if (!event.target.closest(".main-nav ul li")) {
-                //             document.querySelectorAll(".sub-nav").forEach((nav) => {
-                //                 nav.classList.remove("active");
-                //             });
-                //         }
-                //     });
-
-                //     // Mobile Menu Toggle
-                //     const menuToggle = document.querySelector(".menu-toggle");
-                //     const nav = document.querySelector(".main-nav");
-
-                //     menuToggle.addEventListener("click", function () {
-                //         nav.classList.toggle("active");
-                //     });
-                // });
-
-                // document.addEventListener("DOMContentLoaded", function () {
-                //     const menuToggle = document.querySelector(".menu-toggle");
-                //     const navLinks = document.querySelector(".nav-links");
-
-                //     menuToggle.addEventListener("click", function () {
-                //         navLinks.classList.toggle("active");
-                //     });
-                // });
+# Project Title: New Hope Bulacan Agriculture Inc.
+
+## Description
+New Hope Bulacan Agriculture Inc. is a web application for managing the inventory, product listings, 
+and updates related to agricultural feeds. This project is designed to provide a user-friendly 
+platform for displaying and managing information about various agricultural products, community 
+updates, and industry news. It allows both customers and the admin to easily access product 
+information, upload updates, and stay informed about the latest trends in the agriculture industry. 
+The website aims to improve user interaction, streamline product management, and enhance 
+communication with the community.
+
+## Features
+- Feature 1: [Brief description]
+- Feature 2: [Brief description]
+- Feature 3: [Brief description]
+
+## Installation
+1. Clone the repository:
+   ```
+   git clone [repository URL]
+   ```
+2. Navigate to the project directory:
+   ```
+   cd nhb
+   ```
+3. Install dependencies (if applicable):
+   ```
+   [e.g., composer install, npm install]
+   ```
+4. Configure the environment file (if applicable):
+   ```
+   [e.g., copy .env.example to .env and update the necessary configurations]
+   ```
+
+## Usage
+1. Start the server:
+   ```
+   [e.g., php artisan serve, npm start, etc.]
+   ```
+2. Access the application in your browser at:
+   ```
+   http://localhost/[path]
+   ```
+
+## Contributing
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch.
+4. Submit a pull request.
+
+## Developer
+John Vincent R.Peralta
+Bachelor of Science in Information Technology (BSIT)
+4th-Year Student | On-the-Job Trainee
+
+## License
+This project is licensed under the [License Name] - see the LICENSE file for details.
+
+## Contact
+For any inquiries or support, please contact:
+- Email: [your email address]
+- Website: [your website URL]
